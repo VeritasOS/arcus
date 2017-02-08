@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEArcus.WebApp", "BEArcus.WebApp\BEArcus.WebApp.csproj", "{E830D593-2431-4B30-B303-D895BCFA6E3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{CB13FDCF-23C0-4D80-8E31-7570BAA66F33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{A2966CEB-AFA8-460A-8E26-6F22CAC42499}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{FAA37272-31D7-4724-918A-1F6D3E41D39E}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\BEArcusWebApp.json = PublishScripts\Templates\BEArcusWebApp.json
+		PublishScripts\Templates\BEArcusWebApp.param.dev.json = PublishScripts\Templates\BEArcusWebApp.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E830D593-2431-4B30-B303-D895BCFA6E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E830D593-2431-4B30-B303-D895BCFA6E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E830D593-2431-4B30-B303-D895BCFA6E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E830D593-2431-4B30-B303-D895BCFA6E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A2966CEB-AFA8-460A-8E26-6F22CAC42499} = {CB13FDCF-23C0-4D80-8E31-7570BAA66F33}
+		{FAA37272-31D7-4724-918A-1F6D3E41D39E} = {CB13FDCF-23C0-4D80-8E31-7570BAA66F33}
+	EndGlobalSection
+EndGlobal

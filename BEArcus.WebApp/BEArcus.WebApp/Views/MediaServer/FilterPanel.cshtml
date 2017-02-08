@@ -1,0 +1,121 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+@{
+    Layout = "~/Views/Shared/_LayoutMonitor.cshtml";
+}
+@{ string[] mediaServerSelected = ViewBag.MediaServer;
+    string[] befilterSelected = ViewBag.BEFilter; }
+@using (Html.BeginForm("FilterPanel", "MediaServer", FormMethod.Get))
+{
+    <div class="row" style="background-color:#F4F5F6;">
+        <h3 style="margin-left:10px; "><b>@ViewBag.Customer</b></h3>
+        <div style="margin-left:10px; height:100vh; width:230px;  background-color:white;" class="col-md-2">
+            <h3>Filter</h3>
+            <!--<h4><b>@ViewBag.Customer</b></h4>-->
+            <div class="panel-group" style="width:200px;">
+                <div class="panel panel">
+                    <div class="panel-heading"><label>Select Backup Exec Server :</label></div>
+                    <div class="panel-body">
+                        @{var mediaServer = Model.Where(o => o.CustomerName.Equals(ViewBag.Customer));}
+                        @foreach (var media in mediaServer)
+                        {
+                            <div class="checkbox">
+                                @if (ViewBag.MediaServer != null)
+                                {
+                                    if (mediaServerSelected.Contains(media.Name))
+                                    { <label><input type="checkbox" name="mediaServer" value=@media.Name class="mediaServer" checked>@media.Name</label> }
+                                    else {<label><input type="checkbox" name="mediaServer" value=@media.Name class="mediaServer">@media.Name</label> }
+                                }
+                                else { <label><input type="checkbox" name="mediaServer" value=@media.Name class="mediaServer" checked>@media.Name</label>}
+
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group" style="width:200px;">
+                <div class="panel panel">
+                    <div class="panel-heading"><label>Backup Exec Filter :</label></div>
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            @if (ViewBag.BEFilter != null)
+                            {
+                                if (befilterSelected.Contains("Alert") || befilterSelected.Contains("CriticalAlert"))
+                                { <label><input type="checkbox" name="befilter" value="Alert" class="befilter" checked>Alert</label>
+                                }
+                                else { <label><input type="checkbox" name="befilter" value="Alert" class="befilter">Alert</label> }
+                            }
+                            else { <label><input type="checkbox" name="befilter" value="Alert" class="befilter" checked>Alert</label>}
+                        </div>
+                        <div class="checkbox">
+                            @if (ViewBag.BEFilter != null)
+                            {
+                                if (befilterSelected.Contains("Job"))
+                                { <label><input type="checkbox" name="befilter" value="Job" class="befilter" checked>Jobs</label>
+                                }
+                                else { <label><input type="checkbox" name="befilter" value="Job" class="befilter">Jobs</label>}
+                            }
+                            else {<label><input type="checkbox" name="befilter" value="Job" class="befilter" checked>Jobs</label>}
+
+                        </div>
+                        <div class="checkbox">
+                            @if (ViewBag.BEFilter != null)
+                            {
+                                if (befilterSelected.Contains("JobHistory") || befilterSelected.Contains("FailedJob") || befilterSelected.Contains("MissedJob") || befilterSelected.Contains("SuccessfulJob") || befilterSelected.Contains("CompletedWithExceptionJob"))
+                                {  <label><input type="checkbox" name="befilter" value="JobHistory" class="befilter" checked>Job Histories</label>
+                                }
+                                else {  <label><input type="checkbox" name="befilter" value="JobHistory" class="befilter">Job Histories</label>}
+                            }
+                            else { <label><input type="checkbox" name="befilter" value="JobHistory" class="befilter">Job Histories</label>}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-1">
+                    <input name="View" type="submit" class="btn btn-primary" value="View" />
+                </div>
+            </div>
+        </div>
+        @if (ViewBag.MediaServer != null)
+        {
+            <div id="tableView" style="margin-top:10px; margin-right:20px; padding-left:10px; overflow-y:scroll; height:100vh;" class="panel-group col-md-offset-0">
+
+                @foreach (string mediaServer1 in ViewBag.MediaServer)
+                {
+                    <div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    Backup Exec Server: @mediaServer1
+                                </h4>
+                                @{var lastUpdate = Model.Where(o => o.Name.Equals(mediaServer1)).FirstOrDefault().LastUpdate;}
+                                <h4 class="panel-title">
+                                    (Last Update: @lastUpdate)
+                                </h4>
+                            </div>
+                            <div class="panel-body">
+                                @foreach (string befilter in ViewBag.BEFilter)
+                        {
+                            Html.RenderAction(befilter, "MediaServer", new { mediaServer = mediaServer1 });
+                        }
+                            </div>
+                        </div>
+                    </div>
+                                    }
+            </div>
+                                    }
+
+    </div>
+    <script>
+        function loadTableView() {
+            $("#tableView").load("/MediaServer/GetTableView", { mediaServer: $('input[name="mediaServer"]:checked').val(), befilter: $('input[name="befilter"]:checked').val() });
+        }
+    </script>
+                                    }

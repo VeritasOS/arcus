@@ -1,0 +1,83 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+@{
+    Layout = "~/Views/Shared/_LayoutMonitor.cshtml";
+}
+@Scripts.Render("~/bundles/jqueryval")
+@{ var customers = Model.Select(o => o.CustomerName).Distinct(); }
+@using (Html.BeginForm("Group", "MediaServer", FormMethod.Get))
+{
+    <div style="background-color:#F4F5F6;">
+        <div style="width:500px;">
+            <h3>Group Backup Exec Media Servers</h3>
+        </div>
+        @{
+            var i = 1;
+        }
+        @foreach (var customer in customers)
+        {
+            <div class="panel panel-default" style="width:500px; margin-left:20px;">
+                <div class="panel-heading"><h3><span class="glyphicon glyphicon-user" style="margin-right: 25px; margin-left:25px;"></span><a href="#" id=@i contenteditable="true">@customer</a></h3></div>
+                @{var mediaServers = Model.Where(o => o.CustomerName.Equals(customer));}
+                <div class="panel-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="mediaServer@(i)">
+                    <div class="table-responsive">
+                        <table class="table">
+                            @foreach (var mediaServer in mediaServers)
+                            {
+                                <tr ondragstart="dragStart(event)" draggable="true" id=@mediaServer.Name>
+                                    <td id="mediaServerName">
+                                        <label>@mediaServer.Name</label>
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <input name="Save" class="btn btn-primary" value="Save" id=@i onclick="saveGroup();" />
+                </div>
+            </div>
+                        i++;
+                    }
+        <div class="form-group">
+            <input name="NewGroup" class="btn btn-primary" value="New Group" id="newGroupBtn" onclick="loadGroup();" />
+        </div>
+        <div id="newGroup">
+
+        </div>
+    </div>
+    <script>
+
+        function saveGroup() {
+            var idValue = document.activeElement.getAttribute('id');
+            var selectedMedia = document.getElementById("mediaServer" + idValue).innerText.split("\n");
+            var customerName = document.getElementById(idValue).innerText;
+            $.post("/MediaServer/SaveGroupData", { 'mediaServer[]': selectedMedia, customer: customerName }, function () {
+                window.location.href = '@Url.Action("Group", "MediaServer")'
+            });
+        }
+
+        function loadGroup() {
+            document.getElementById("newGroupBtn").disabled = true;
+            $("#newGroup").load("/MediaServer/CreateGroup");
+        }
+
+        function dragStart(event) {
+            event.dataTransfer.setData("Text", event.target.id);
+        }
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+        }
+    </script>
+                    }

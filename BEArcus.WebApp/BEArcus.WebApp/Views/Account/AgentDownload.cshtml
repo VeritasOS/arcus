@@ -1,0 +1,54 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+@model List<string>
+@{
+    ViewBag.Title = "Guidelines to download and run Agent Application";
+}
+
+<div style="background-image: url(../../Images/Arcus.jpg);  background-position: center;  background-size:100% 100%; height:100vh; width:100vw; background-repeat: no-repeat; padding-top:100px; overflow-y:scroll;" class="row">
+
+    <div class="col-md-offset-2 col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-body" style="max-height: 700px;overflow-y: scroll;">
+
+                <h2>@ViewBag.Title.</h2>
+                <div>
+                    <section id="DownloadForm">
+                        @using (Html.BeginForm("HomePage", "MediaServer", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <hr />
+                            <h3>Step 1</h3>
+                            <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>Download the Agent Application form here @Html.ActionLink("Download", "Download")</h5>
+
+                                <!-- <div class="form-group">
+                                     @Html.Label("Agent Application", new { @class = "col-md-4 control-label" })
+                                     <div class="col-md-offset-4">
+                                         @Html.ActionLink("Download", "Download")
+                                     </div>
+                                 </div>-->
+                                <h3>Step 2</h3>
+                                <h4>Run the Agent Application by:</h4>
+                                <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>Clicking BEArcus.Agent.exe under Debug Folder.</h5>
+                                <h5 style="margin-left:60px;"><b>OR</b></h5>
+                                <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>Through command prompt by typing the following command :<b>BEArcus.Agent.exe</b></h5>
+                                <h5>After you run the application it will push the alerts, jobs and job history data to the server. And you can view the data by connecting to this portal.</h5>
+                                <div class="form-group">
+                                    <div class="col-md-offset-7 ">
+                                        <input type="submit" value="Finish" class="btn btn-primary" />
+                                    </div>
+                                </div>
+                        }
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

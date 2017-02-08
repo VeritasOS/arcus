@@ -1,0 +1,46 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    ViewBag.Title = "MediaServer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+<div class="panel-group">
+    @foreach (var item in Model)
+    {
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse1"><b>Media Server:</b> @item.Name  <b>Customer Name:</b> @item.CustomerName </a>
+                </h4>
+            </div>
+
+            <div>
+                @{
+                    Html.RenderAction("Alert1", new { mediaServer = item.Name });
+                }
+            </div>
+            <div>
+                @{
+                    Html.RenderAction("Job", new { mediaServer = item.Name });
+                }
+            </div>
+            <div>
+                @{
+                    Html.RenderAction("JobHistory", new { mediaServer = item.Name });
+                }
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+            </div>
+        </div>
+                    }
+
+</div>
