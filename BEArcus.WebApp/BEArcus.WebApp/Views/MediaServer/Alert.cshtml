@@ -1,0 +1,112 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.Alert>
+@{
+    Layout = null;
+}
+@{
+    string mediaServer = ViewBag.Mediaserver;
+    IEnumerable<string> Category = Model.Select(o => o.Category).Distinct();
+    Category = Category.Concat(new[] { "All" });
+    IEnumerable<string> Name = Model.Select(o => o.Name).Distinct();
+    Name = Name.Concat(new[] { "All" });
+    IEnumerable<string> Message = Model.Select(o => o.Message).Distinct();
+    Message = Message.Concat(new[] { "All" });
+    IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
+    BE_id = BE_id.Concat(new[] { "All" });
+    IEnumerable<string> Date = Model.Select(o => o.Date.ToString("s") + "Z").Distinct();
+    Date = Date.Concat(new[] { "All" });
+
+    IEnumerable<string> BackupExec = Model.Select(o => o.BackupExecServerName).Distinct();
+    BackupExec = BackupExec.Concat(new[] { "All" });
+}
+@using (Html.BeginForm("Alert", "MediaServer", new { media = ViewBag.Mediaserver }, FormMethod.Post))
+{
+    <div class="table-responsive" id="alert@(mediaServer)">
+        <div style="background-color:#414142;"><h4 style="color:white;"> &nbsp;&nbsp;&nbsp;Alert</h4></div>
+        <table class="table">
+            <tr style="background-color:#E6EAEE">
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                    @Html.DropDownList("Name", new SelectList(Name), "Select", new { @class = mediaServer, onchange = "loadAlertName(this);" })
+                </th>
+                <th>
+                    <div style="width: 200px;">
+                        <a href="#" class=@mediaServer onclick="loadDate()">Date<span class="glyphicon glyphicon-triangle-bottom" style="padding-left:10px;"></span></a>
+                    </div>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Severity)
+                    @Html.DropDownList("Severity", new SelectList(new List<string> { "All", "Error", "Warning", "Attention Required", "Information" }), "Select", new { @class = mediaServer, onchange = "loadSeverity(this);" })
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                    @Html.DropDownList("Category", new SelectList(Category), "Select", new { @class = mediaServer, onchange = "loadCategory(this);" })
+                </th>
+                <th>
+                    <div style="width: 300px;">
+                        @Html.DisplayNameFor(model => model.Message)
+                    </div>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Source)
+                </th>
+                <th>
+                    <div style="width: 100px;">
+                        @Html.DisplayNameFor(model => model.Umi)
+                    </div>
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                var style = (item.Severity.Equals("Error")) ? "color:red" : "";
+                <tr style="@style">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Severity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Message)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Source)
+                    </td>
+                    <td>
+                        <a href="https://www.veritas.com/support/en_US/search-results.html?keyword=@item.Umi" target="_blank">@Html.DisplayFor(modelItem => item.Umi)</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <script>
+        function loadAlertName(elem) {
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetAlertName", { Name:elem.value, media:opt,alerts:@Html.Raw(Json.Encode(ViewBag.Alerts))});
+        }
+        function loadDate(elem) {
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetSortedDate", { sortOrder:@Html.Raw(Json.Encode(ViewBag.DateSortParm)) , media:opt });
+        }
+        function loadSeverity(elem) {
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetSeverity", { Severity:elem.value, media:opt,alerts: @Html.Raw(Json.Encode(ViewBag.Alerts))});
+        }
+        function loadCategory(elem) {
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetCategory", { Category:elem.value, media:opt,alerts: @Html.Raw(Json.Encode(ViewBag.Alerts)) });
+        }
+    </script>
+}

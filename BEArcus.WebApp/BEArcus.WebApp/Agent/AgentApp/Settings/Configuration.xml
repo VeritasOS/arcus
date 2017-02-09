@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns="http://schemas.arcus.com/configuration">
+  <CommonSettings>
+    <Setting Name="BemcliScripts" Value="BEMCLIScripts\Main.ps1" />
+    <Setting Name="CustomerName" Value="All BE Servers" />
+    <Setting Name="DatabaseName" Value="ArcusRegistry" />
+    <Setting Name="AlertCollectionName" Value="AlertCollection" />
+    <Setting Name="JobCollectionName" Value="JobCollection" />
+    <Setting Name="JobHistoryCollectionName" Value="JobHistoryCollection" />
+    <Setting Name="MediaServerCollectionName" Value="MediaServerCollection" />
+    <Setting Name="TimeInterval" Value="6000000" />
+    <Setting Name="AgentVersion" Value="1.0" />
+  </CommonSettings>
+  <DataStores>
+    <FileSystem Name="FileStream1" AlertPath="E:\FS1_ALERT.json" JobPath="E:\FS1_JOB.json" JobHistoryPath="E:\FS1_JOBHISTORY.json" MediaServerPath="E:\FS1_MEDIASERVER.json" Enabled="true" />
+    <FileSystem Name="FileStream2" AlertPath="E:\FS2_ALERT.json" JobPath="E:\FS2_JOB.json" JobHistoryPath="E:\FS2_JOBHISTORY.json" MediaServerPath="E:\FS2_MEDIASERVER.json" Enabled="false" />
+    <DocumentDB Name="DDB1" EndPointUrl="https://bearcus1.documents.azure.com:443/" AuthorizationKey="uGrabnoIuImdymVWmxA0HhuWlPVXeWuTJOI8Rf9cFCTu4zlYQed2i9NYsWxqvtQPYChfUZoKdntRfXYyZayHAQ==" Enabled="false" />
+  </DataStores>
+  <LogSetting Name="LogFilePath" Value="C:\Arcus.Logs" Enabled="true" />
+</Configuration>

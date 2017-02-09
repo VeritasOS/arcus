@@ -1,0 +1,1595 @@
+﻿Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Creating EventLog source ArcusService in log Application...
+Rolling back assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Restoring event log to previous state for source ArcusService.
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Creating EventLog source ArcusService in log Application...
+Rolling back assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Restoring event log to previous state for source ArcusService.
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Attempt to stop service ArcusService.
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Attempt to stop service ArcusService.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Attempt to stop service ArcusService.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\bearcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Creating EventLog source ArcusService in log Application...
+Rolling back assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Restoring event log to previous state for source ArcusService.
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Creating EventLog source ArcusService in log Application...
+Rolling back assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Restoring event log to previous state for source ArcusService.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Attempt to stop service ArcusService.
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Attempt to stop service ArcusService.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Creating EventLog source ArcusService in log Application...
+Rolling back assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Restoring event log to previous state for source ArcusService.
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Warning: The source ArcusService is not registered on the local machine.
+Service ArcusService is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Creating EventLog source ArcusService in log Application...
+Rolling back assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Restoring event log to previous state for source ArcusService.
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Attempt to stop service ArcusService.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Creating EventLog source ArcusService in log Application...
+Rolling back assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Restoring event log to previous state for source ArcusService.
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
+Installing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Installing service ArcusService...
+Service ArcusService has been successfully installed.
+Creating EventLog source ArcusService in log Application...
+Committing assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
