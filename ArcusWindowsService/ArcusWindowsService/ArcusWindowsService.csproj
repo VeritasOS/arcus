@@ -160,7 +160,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.Azure.DocumentDB.1.11.3\build\Microsoft.Azure.DocumentDB.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Azure.DocumentDB.1.11.3\build\Microsoft.Azure.DocumentDB.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>copy "*.*" "E:\ARCUS\arcus\BEArcus.WebApp\BEArcus.WebApp\Agent\AgentApp"</PostBuildEvent>
+    <PostBuildEvent>copy "*.*" "C:\Test"
+copy "Settings\*.*" "C:\Test\Settings"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
