@@ -1,0 +1,12 @@
+<TimeSetting GlobalRunTime="08-02-2017 10:32:56">
+  <FileSystem Name="FileStream1">
+    <Alert User="NT AUTHORITY\SYSTEM" FetchStartTime="08-02-2017 19:11:02" FetchEndTime="08-02-2017 19:21:56" LastUpdatedTime="08-02-2017 15:05:25" />
+    <Job User="NT AUTHORITY\SYSTEM" FetchStartTime="08-02-2017 03:50:13" FetchEndTime="2016-02-25" LastUpdatedTime="" />
+    <JobHistory User="NT AUTHORITY\SYSTEM" FetchStartTime="08-02-2017 19:11:18" FetchEndTime="08-02-2017 19:22:11" LastUpdatedTime="08-02-2017 19:22:11" />
+  </FileSystem>
+  <DocumentDB Name="DDB1">
+    <Alert User="NT AUTHORITY\SYSTEM" FetchStartTime="25-02-2016 00:00:00" FetchEndTime="08-02-2017 19:27:37" LastUpdatedTime="08-02-2017 19:29:54" />
+    <Job User="NT AUTHORITY\SYSTEM" FetchStartTime="08-02-2017 19:27:32" FetchEndTime="2016-02-25" LastUpdatedTime="" />
+    <JobHistory User="NT AUTHORITY\SYSTEM" FetchStartTime="25-02-2016 00:00:00" FetchEndTime="08-02-2017 19:30:07" LastUpdatedTime="08-02-2017 19:30:36" />
+  </DocumentDB>
+</TimeSetting>
