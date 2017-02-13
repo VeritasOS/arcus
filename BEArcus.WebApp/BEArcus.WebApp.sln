@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 		PublishScripts\Templates\BEArcusWebApp.param.dev.json = PublishScripts\Templates\BEArcusWebApp.param.dev.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcusWindowsService", "..\..\OneSolutionTest\ArcusWindowsService\ArcusWindowsService\ArcusWindowsService.csproj", "{6D09E624-3986-44AE-A540-7079150DEB86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcusWindowsService", "..\ArcusWindowsService\ArcusWindowsService\ArcusWindowsService.csproj", "{6D09E624-3986-44AE-A540-7079150DEB86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
