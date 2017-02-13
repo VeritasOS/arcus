@@ -8,9 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{CB13FDCF-23C0-4D80-8E31-7570BAA66F33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{A2966CEB-AFA8-460A-8E26-6F22CAC42499}"
-	ProjectSection(SolutionItems) = preProject
-		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{FAA37272-31D7-4724-918A-1F6D3E41D39E}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 		PublishScripts\Templates\BEArcusWebApp.param.dev.json = PublishScripts\Templates\BEArcusWebApp.param.dev.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcusWindowsService", "..\ArcusWindowsService\ArcusWindowsService\ArcusWindowsService.csproj", "{6D09E624-3986-44AE-A540-7079150DEB86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcusWindowsService", "..\..\OneSolutionTest\ArcusWindowsService\ArcusWindowsService\ArcusWindowsService.csproj", "{6D09E624-3986-44AE-A540-7079150DEB86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
