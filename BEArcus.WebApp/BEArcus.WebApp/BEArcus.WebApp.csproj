@@ -265,9 +265,10 @@
     <Content Include="Agent\AgentApp\Newtonsoft.Json.dll" />
     <Content Include="Agent\AgentApp\Newtonsoft.Json.xml" />
     <Content Include="Agent\AgentApp\Server\PurgeData.js" />
-    <Content Include="Agent\AgentApp\Settings\Configuration.xml" />
+    <Content Include="Agent\AgentApp\Settings\Configuration.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Agent\AgentApp\System.Management.Automation.dll" />
-    <Content Include="Agent\AgentApp\UserSettings.xml" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
