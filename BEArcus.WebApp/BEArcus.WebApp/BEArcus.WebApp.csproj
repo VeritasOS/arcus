@@ -290,7 +290,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Agent\AgentApp\ArcusWindowsService.exe.config" />
     <Content Include="Agent\AgentApp\ArcusWindowsService.InstallLog" />
-    <Content Include="Agent\AgentApp\ArcusWindowsService.InstallState" />
     <Content Include="Agent\AgentApp\ArcusWindowsService.vshost.exe.config" />
     <Content Include="Agent\AgentApp\ArcusWindowsService.vshost.exe.manifest" />
     <Content Include="Agent\AgentApp\BEMCLIScripts\Alerts.psm1" />
