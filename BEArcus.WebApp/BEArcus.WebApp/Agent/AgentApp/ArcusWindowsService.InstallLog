@@ -1593,3 +1593,11 @@ Affected parameters are:
    logtoconsole = 
    logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
    assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Uninstalling assembly 'E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.InstallLog
+   assemblypath = E:\ARCUS\arcus\ArcusWindowsService\ArcusWindowsService\bin\Debug\ArcusWindowsService.exe
+Removing EventLog source ArcusService.
+Service ArcusService is being removed from the system...
+Service ArcusService was successfully removed from the system.
