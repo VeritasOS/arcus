@@ -12,13 +12,16 @@ namespace BEArcus.Agent
         ///<Summary>Dererializes the Json string.</Summary>  
         public static T JsonDeserialize<T>(string jsonString)
         {
+            LogUtility.LogInfoFunction("Entered JsonDeserialize.");
             return JsonConvert.DeserializeObject<T>(jsonString);
         }
 
         ///<Summary>Serialize to Json String.</Summary>  
         public static string JsonSerializer<T>(T dataObject)
         {
+            LogUtility.LogInfoFunction("Entered JsonSerializer.");
             return JsonConvert.SerializeObject(dataObject, Formatting.Indented);
+
         }
     }
 }

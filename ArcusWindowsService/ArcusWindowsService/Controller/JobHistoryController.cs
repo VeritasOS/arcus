@@ -29,6 +29,7 @@ namespace BEArcus.Agent
         /// </param>
         public static void SaveJobHistoryData(IStorageService storageType, string storageId)
         {
+            LogUtility.LogInfoFunction("Entered SaveJobHistoryData.");
             //check the storage type to get the specific data from UserSettings.xml file
             if (storageType.GetType() == typeof(FileDataController))
             {
@@ -80,6 +81,7 @@ namespace BEArcus.Agent
         ///</param>
         public static List<JobHistory> GetJobHistory(string name = "", string jobStatus = "", string jobType = "", int? number = null)
         {
+            LogUtility.LogInfoFunction("Entered GetJobHistory.");
             //For Loading the powershell scripts ( Main.ps1 ) in memory.
             LogUtility.LogInfoFunction("Calling BemcliHelper function LoadPowerShellScript(); ");
             PowerShell powershell = BemcliHelper.LoadPowerShellScript();
@@ -119,6 +121,7 @@ namespace BEArcus.Agent
         ///</Summary>     
         public static List<JobHistory> GetJobHistoryByDate(DateTime fromDate, DateTime toDate, int? number = null)
         {
+            LogUtility.LogInfoFunction("Entered GetJobHistoryByDate.");
             //For Loading the powershell scripts ( Main.ps1 ) in memory.
             LogUtility.LogInfoFunction("Calling BemcliHelper function LoadPowerShellScript(); ");
             BemcliHelper bemcliObject = new BemcliHelper();
@@ -165,6 +168,7 @@ namespace BEArcus.Agent
         //Converts the Json string into List of Alert Objects
         public static List<JobHistory> ConvertFromJson(string jsonString)
         {
+            LogUtility.LogInfoFunction("Entered ConvertFromJson.");
             //To check if the JsonString contains an array of objects or a single object.
             var token = JToken.Parse(jsonString);
             if (token is JArray)

@@ -863,7 +863,7 @@ namespace BEArcus.WebApp.Controllers
         {
             client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey);
 
-            Init(beDatabaseId, jobCollectionId);
+            Init(beDatabaseId, jobHistoryCollectionId);
             var collectionLink = UriFactory.CreateDocumentCollectionUri(beDatabaseId, jobHistoryCollectionId);
 
             return client.CreateDocumentQuery<JobHistory>(
@@ -881,7 +881,7 @@ namespace BEArcus.WebApp.Controllers
         {
             client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey);
 
-            Init(beDatabaseId, jobCollectionId);
+            Init(beDatabaseId, jobHistoryCollectionId);
             var collectionLink = UriFactory.CreateDocumentCollectionUri(beDatabaseId, jobHistoryCollectionId);
 
             return client.CreateDocumentQuery<JobHistory>(
@@ -899,7 +899,7 @@ namespace BEArcus.WebApp.Controllers
         {
             client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey);
 
-            Init(beDatabaseId, jobCollectionId);
+            Init(beDatabaseId, jobHistoryCollectionId);
             var collectionLink = UriFactory.CreateDocumentCollectionUri(beDatabaseId, jobHistoryCollectionId);
 
             return client.CreateDocumentQuery<JobHistory>(
@@ -917,7 +917,7 @@ namespace BEArcus.WebApp.Controllers
         {
             client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey);
 
-            Init(beDatabaseId, jobCollectionId);
+            Init(beDatabaseId, jobHistoryCollectionId);
             var collectionLink = UriFactory.CreateDocumentCollectionUri(beDatabaseId, jobHistoryCollectionId);
 
             return client.CreateDocumentQuery<JobHistory>(

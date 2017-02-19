@@ -25,6 +25,7 @@ namespace BEArcus.Agent
         /// </param>
         public static void SaveJobData(IStorageService storageType, string storageId)
         {
+            LogUtility.LogInfoFunction("Entered SaveJobData.");
             List<Job> jobObjects = GetJob();
             if (jobObjects != null)
             {
@@ -55,6 +56,7 @@ namespace BEArcus.Agent
         ///</param>
         public static List<Job> GetJob(string name = "", string jobType = "", string taskType = "", int? number = null)
         {
+            LogUtility.LogInfoFunction("Entered GetJob.");
             //For Loading the powershell scripts ( Main.ps1 ) in memory.
             LogUtility.LogInfoFunction("Calling BemcliHelper function LoadPowerShellScript(); ");
             PowerShell powershell = BemcliHelper.LoadPowerShellScript();
@@ -103,6 +105,7 @@ namespace BEArcus.Agent
         //Converts the Json string into List of Job Objects
         public static List<Job> ConvertFromJson(string jsonString)
         {
+            LogUtility.LogInfoFunction("Entered ConvertFromJson.");
             //To check if the JsonString contains an array of objects or a single object.
             var token = JToken.Parse(jsonString);
             if (token is JArray)

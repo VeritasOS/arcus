@@ -14,6 +14,7 @@ namespace BEArcus.Agent
 
         public static void SaveMediaServerData(IStorageService storageType, string storageId)
         {
+            LogUtility.LogInfoFunction("Entered SaveMediaServerData.");
             MediaServer mediaServerObject = GetMediaSeverData();
 
             if (mediaServerObject != null)
@@ -34,6 +35,7 @@ namespace BEArcus.Agent
         /// <returns>Media server Name.</returns>
         public static string GetMediaSever()
         {
+            LogUtility.LogInfoFunction("Entered GetMediaServer.");
             LogUtility.LogInfoFunction("Calling BemcliHelper function LoadPowerShellScript(); ");
             PowerShell powershell = BemcliHelper.LoadPowerShellScript();
 
@@ -59,6 +61,7 @@ namespace BEArcus.Agent
 
         public static MediaServer GetMediaSeverData()
         {
+            LogUtility.LogInfoFunction("Entered GetMediaServerData.");
             LogUtility.LogInfoFunction("Calling BemcliHelper function LoadPowerShellScript(); ");
             PowerShell powershell = BemcliHelper.LoadPowerShellScript();
 
@@ -87,6 +90,7 @@ namespace BEArcus.Agent
 
         public static MediaServer ConvertFromJson(string jsonString)
         {
+            LogUtility.LogInfoFunction("Entered ConvertFromJson.");
             LogUtility.LogInfoFunction("Calling JsonHelper function  JsonHelper.JsonDeserialize<MediaServer>(jsonString); ");
             var mediaServerObject = JsonHelper.JsonDeserialize<MediaServer>(jsonString);
             LogUtility.LogInfoFunctionFinished();

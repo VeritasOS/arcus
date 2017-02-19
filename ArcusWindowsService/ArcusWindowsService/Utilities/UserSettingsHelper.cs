@@ -25,6 +25,7 @@ namespace BEArcus.Agent
 
         public static void CreateFileSystemSettings(string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered CreateFileSystemSettings.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -93,6 +94,7 @@ namespace BEArcus.Agent
 
         public static void FileSetAlertLastUpdateTime(string fileSystemName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered FileSetAlertLastUpdateTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -104,6 +106,7 @@ namespace BEArcus.Agent
 
         public static string FileGetAlertFetchEndTime(string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered FileGetAlertFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -114,6 +117,7 @@ namespace BEArcus.Agent
 
         public static void FileSetAlertFetchEndTime(string fileSystemName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered FileSetAlertFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -124,6 +128,7 @@ namespace BEArcus.Agent
         }
         public static void FileSetJobHistoryLastUpdateTime(string fileSystemName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered FileJobHistoryLastUpdateTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -135,6 +140,7 @@ namespace BEArcus.Agent
 
         public static void FileSetJobLastUpdateTime(string fileSystemName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered FileSetJobLastUpdateTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -146,6 +152,7 @@ namespace BEArcus.Agent
 
         public static void FileSetAlertFetchStartTime(string fileSystemName, DateTime startTime)
         {
+            LogUtility.LogInfoFunction("Entered FileSetAlertFetchStartTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -156,6 +163,7 @@ namespace BEArcus.Agent
         }
         public static void FileSetJobHistoryFetchStartTime(string fileSystemName, DateTime startTime)
         {
+            LogUtility.LogInfoFunction("Entered FileSetJobHistoryFetchStartTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -167,6 +175,7 @@ namespace BEArcus.Agent
 
         public static void DocumetDBSetAlertFetchStartTime(string documentDBName, DateTime startTime)
         {
+            LogUtility.LogInfoFunction("Entered DocumentDBSetAlertFetchStartTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -178,6 +187,7 @@ namespace BEArcus.Agent
 
         public static void DocumentDBSetJobHistoryFetchStartTime(string documentDBName, DateTime startTime)
         {
+            LogUtility.LogInfoFunction("Entered DocumentDBSetJobHistoryFetchStartTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -189,6 +199,7 @@ namespace BEArcus.Agent
 
         public static string FileGetJobHistoryFetchEndTime(string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered FileGetJobHistoryFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -199,6 +210,7 @@ namespace BEArcus.Agent
 
         public static void FileSetJobHistoryFetchEndTime(string fileSystemName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered FileSetJobHistoryFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -210,6 +222,7 @@ namespace BEArcus.Agent
 
         public static void CreateDocumentDBSettings(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered CreateDocumentDBSettings.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -277,6 +290,7 @@ namespace BEArcus.Agent
 
         public static string GetLastUpdatedTime(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered GetLastUpdateTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -287,6 +301,7 @@ namespace BEArcus.Agent
 
         public static void SetLastUpdateTime(string documentDBName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered SetLastUpdateTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -298,6 +313,7 @@ namespace BEArcus.Agent
 
         public static string GetFetchEndTime(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered GetFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -308,6 +324,7 @@ namespace BEArcus.Agent
 
         public static void SetFetchEndTime(string documentDBName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered SetFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -318,6 +335,7 @@ namespace BEArcus.Agent
         }
         public static void SetJobHistoryLastUpdateTime(string documentDBName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered SetJobHistoryLastUpdateTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -329,6 +347,7 @@ namespace BEArcus.Agent
 
         public static string GetJobHistoryFetchEndTime(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered GetJobHistoryFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -339,6 +358,7 @@ namespace BEArcus.Agent
 
         public static void SetJobHistoryFetchEndTime(string documentDBName, DateTime lastUpdateTime)
         {
+            LogUtility.LogInfoFunction("Entered SetJobHistoryFetchEndTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -349,16 +369,18 @@ namespace BEArcus.Agent
         }
         public static void CreateSettingsFile()
         {
-            XmlDocument xmlDoc = new XmlDocument();          
+            LogUtility.LogInfoFunction("Entered CreateSettingsFile.");
+            XmlDocument xmlDoc = new XmlDocument();
             XmlNode root = xmlDoc.CreateElement("TimeSetting");
             XmlAttribute globalRunTime = xmlDoc.CreateAttribute("GlobalRunTime");
-            root.Attributes.Append(globalRunTime);          
+            root.Attributes.Append(globalRunTime);
             xmlDoc.AppendChild(root);
             xmlDoc.Save(@".\UserSettings.xml");
         }
 
         public static void SetRunTime(DateTime runTime)
         {
+            LogUtility.LogInfoFunction("Entered SetRunTime.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -370,6 +392,7 @@ namespace BEArcus.Agent
 
         public static void CreateAlertNode(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered CreateAlertNode.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -392,6 +415,7 @@ namespace BEArcus.Agent
         }
         public static void CreateJobNode(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered CreateJobNode.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 
@@ -415,6 +439,7 @@ namespace BEArcus.Agent
 
         public static void CreateJobHistoryNode(XmlNode documentDBNode)
         {
+            LogUtility.LogInfoFunction("Entered CreateJobHistoryNode.");
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(@".\UserSettings.xml");
 

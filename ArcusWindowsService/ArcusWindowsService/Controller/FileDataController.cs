@@ -22,6 +22,7 @@ namespace BEArcus.Agent
         ///</Summary>       
         public void SaveAlertData(List<Alert> alertObject, string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered SaveAlertData.");
             string jsonstr = JsonHelper.JsonSerializer<List<Alert>>(alertObject);
             string jsonFilePath = GetFileSystemType(fileSystemName).AlertPath;
             LogUtility.LogInfoFunction("Alert:Writing to Json file.");
@@ -36,6 +37,7 @@ namespace BEArcus.Agent
         ///</Summary>  
         public void SaveJobData(List<Job> jobObject, string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered SaveJobData.");
             string jsonstr = JsonHelper.JsonSerializer<List<Job>>(jobObject);
             string jsonFilePath = GetFileSystemType(fileSystemName).JobPath;
             LogUtility.LogInfoFunction("Deleting the existing file contents.");
@@ -52,6 +54,7 @@ namespace BEArcus.Agent
         ///</Summary>  
         public void SaveJobHistoryData(List<JobHistory> jobHistoryObject, string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered SaveJobHistoryData.");
             string jsonstr = JsonHelper.JsonSerializer<List<JobHistory>>(jobHistoryObject);
             string jsonFilePath = GetFileSystemType(fileSystemName).JobHistoryPath;
             LogUtility.LogInfoFunction("JobHistory:Writing to Json file.");
@@ -64,6 +67,7 @@ namespace BEArcus.Agent
 
         public void SaveMediaServerData(MediaServer mediaServerObject, string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered SaveMediaServerData.");
             string jsonstr = JsonHelper.JsonSerializer<MediaServer>(mediaServerObject);
             string jsonFilePath = GetFileSystemType(fileSystemName).MediaServerPath;
             LogUtility.LogInfoFunction("MediaServer:Writing to Json file.");
@@ -79,6 +83,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public FileSystemType GetFileSystemType(string fileSystemName)
         {
+            LogUtility.LogInfoFunction("Entered GetFileSystemType.");
             LogUtility.LogInfoFunction("Getting FileSystemType");
             LogUtility.LogInfoFunctionFinished();
             return Configuration.Instance.DataStores.FileSystem.

@@ -29,6 +29,7 @@ namespace BEArcus.Agent
         /// </param>
         public static void SaveAlertData(IStorageService storageType, string storageId)
         {
+            LogUtility.LogInfoFunction("Entered SaveAlertData.");
             if (storageType.GetType() == typeof(FileDataController))
             {
                 fetchEndTime = Convert.ToDateTime(UserSettingsHelper.FileGetAlertFetchEndTime(storageId));
@@ -75,6 +76,7 @@ namespace BEArcus.Agent
         ///</param>
         public static List<Alert> GetAlert(string name = "", string severity = "", string category = "", int? number = null)
         {
+            LogUtility.LogInfoFunction("Entered GetAlert.");
             //For Loading the powershell scripts ( Main.ps1 ) in memory.
             LogUtility.LogInfoFunction("Calling BemcliHelper function LoadPowerShellScript(); ");
             PowerShell powershell = BemcliHelper.LoadPowerShellScript();
@@ -112,7 +114,7 @@ namespace BEArcus.Agent
         ///</Summary>     
         public static List<Alert> GetAlertByDate(DateTime fromDate, DateTime toDate, int? number = null)
         {
-
+            LogUtility.LogInfoFunction("Entered GetAlertByDate.");
             //For Loading the powershell scripts ( Main.ps1 )in memory.
             LogUtility.LogInfoFunction("Call to BemcliHelper.LoadPowerShellScript();");
             PowerShell powershell = BemcliHelper.LoadPowerShellScript();
@@ -148,11 +150,13 @@ namespace BEArcus.Agent
         ///</Summary>  
         public static void ViewAlerts(List<Alert> alertObjects)
         {
+            LogUtility.LogInfoFunction("Entered ViewAlerts.");
             foreach (Alert alertObject in alertObjects)
             {
                 Console.WriteLine("\nNamg:\t {0} \n Id:\t {1} \n Datg:\t {2}\n\n",
                                  alertObject.Name, alertObject.Id, alertObject.Date);
             }
+            LogUtility.LogInfoFunctionFinished();
         }
 
         ///<Summary> 
@@ -160,6 +164,7 @@ namespace BEArcus.Agent
         ///</Summary>  
         public static List<Alert> ConvertFromJson(string jsonString)
         {
+            LogUtility.LogInfoFunction("Entered ConvertFromJson.");
             //To check if the JsonString contains an array of objects / a single object.            
             var token = JToken.Parse(jsonString);
             if (token is JArray)

@@ -47,6 +47,8 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered GetOrCreateDatabase.");
+
                 // Check to verify a database with the id=ArcusRegistry does not exist
                 Database database = client.CreateDatabaseQuery().
                                     Where(db => db.Id == databaseId).AsEnumerable().FirstOrDefault();
@@ -83,6 +85,8 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered GetOrCreateCollection.");
+
                 // Check to verify a document collection with the id=collectionId does not exist
                 DocumentCollection documentCollection = client.CreateDocumentCollectionQuery("dbs/" + databaseId).
                                                         Where(c => c.Id == collectionId).AsEnumerable().FirstOrDefault();
@@ -128,6 +132,8 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered SaveAlertData.");
+
                 List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
                 EndpointUrl = list[0];
                 AuthorizationKey = list[1];
@@ -170,6 +176,7 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered SaveJobData.");
                 List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
                 EndpointUrl = list[0];
                 AuthorizationKey = list[1];
@@ -210,13 +217,16 @@ namespace BEArcus.Agent
         /// </param>
         public void SaveJobHistoryData(List<JobHistory> jobHistoryObject, string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered SaveJobHistoryData.");
             SaveJobHistory(jobHistoryObject, documentDBName).Wait();
+            LogUtility.LogInfoFunctionFinished();
         }
 
         public async Task SaveJobHistory(List<JobHistory> jobHistoryObject, string documentDBName)
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered SaveJobHistory.");
                 List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
                 EndpointUrl = list[0];
                 AuthorizationKey = list[1];
@@ -256,6 +266,7 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered SaveMediaServerData.");
                 List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
                 EndpointUrl = list[0];
                 AuthorizationKey = list[1];
@@ -292,6 +303,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public async Task DeleteJob(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered DeleteJob.");
             List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
             EndpointUrl = list[0];
             AuthorizationKey = list[1];
@@ -322,6 +334,7 @@ namespace BEArcus.Agent
                     {
                         await client.DeleteDocumentAsync(doc.SelfLink);
                     }
+                    LogUtility.LogInfoFunctionFinished();
                 }
                 catch (Exception e)
                 {
@@ -339,6 +352,8 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public async Task DeleteMediaServer(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered DeleteMediaServer.");
+
             List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
             EndpointUrl = list[0];
             AuthorizationKey = list[1];
@@ -369,6 +384,7 @@ namespace BEArcus.Agent
                     {
                         await client.DeleteDocumentAsync(doc.SelfLink);
                     }
+                    LogUtility.LogInfoFunctionFinished();
                 }
                 catch (Exception e)
                 {
@@ -386,6 +402,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public async Task<StoredProcedure> CreateAlertStoredProcedure(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered CreateAlertStoredProcedure.");
             List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
             EndpointUrl = list[0];
             AuthorizationKey = list[1];
@@ -393,8 +410,8 @@ namespace BEArcus.Agent
             using (client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey))
             {
                 // Get database
-                Database database = client.CreateDatabaseQuery().
-                                Where(db => db.Id == databaseId).AsEnumerable().FirstOrDefault();
+                //Database database = client.CreateDatabaseQuery().
+                //                Where(db => db.Id == databaseId).AsEnumerable().FirstOrDefault();
 
                 // Get collection (Alert)
                 DocumentCollection collection = client.CreateDocumentCollectionQuery("dbs/" + databaseId).
@@ -428,6 +445,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public async Task<StoredProcedure> CreateJobHistoryStoredProcedure(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered CreateJobHistoryStoredProcedure.");
             List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
             EndpointUrl = list[0];
             AuthorizationKey = list[1];
@@ -435,8 +453,8 @@ namespace BEArcus.Agent
             using (client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey))
             {
                 // Get database
-                Database database = client.CreateDatabaseQuery().
-                                Where(db => db.Id == databaseId).AsEnumerable().FirstOrDefault();
+                //Database database = client.CreateDatabaseQuery().
+                //                Where(db => db.Id == databaseId).AsEnumerable().FirstOrDefault();
 
                 // Get collection (Job History)
                 DocumentCollection collection = client.CreateDocumentCollectionQuery("dbs/" + databaseId).
@@ -470,6 +488,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public async Task Execute_spBulkDeleteAlerts(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered Execute_spBulkDeleteAlerts.");
             List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
             EndpointUrl = list[0];
             AuthorizationKey = list[1];
@@ -493,6 +512,7 @@ namespace BEArcus.Agent
 
                 var count = await Execute_spBulkDelete(client, sql, "spDeleteAlert", collection);
                 LogUtility.LogInfoFunction(String.Format("Deleted documents; count: {0}", count));
+                LogUtility.LogInfoFunctionFinished();
             }
         }
 
@@ -503,6 +523,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public async Task Execute_spBulkDeleteJobHistories(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered Execute_spBulkDeleteJobHistories.");
             List<string> list = GetEndpointUrlAndAuthorizationKey(documentDBName);
             EndpointUrl = list[0];
             AuthorizationKey = list[1];
@@ -532,6 +553,7 @@ namespace BEArcus.Agent
 
         private async static Task<int> Execute_spBulkDelete(DocumentClient client, string sql, string sprocId, DocumentCollection collection)
         {
+            LogUtility.LogInfoFunction("Entered Execute_spBulkDelete.");
             var continuationFlag = true;
             var totalDeletedCount = 0;
             while (continuationFlag)
@@ -549,6 +571,7 @@ namespace BEArcus.Agent
 
         private async static Task<T> ExecuteStoredProcedure<T>(DocumentClient client, string sprocId, DocumentCollection collection, params dynamic[] sprocParams)
         {
+            LogUtility.LogInfoFunction("Entered ExecuteStoredProcedure.");
             var query = new SqlQuerySpec
             {
                 QueryText = "SELECT * FROM c WHERE c.id = @id",
@@ -591,6 +614,7 @@ namespace BEArcus.Agent
         /// <param name="collectionId">Collection Id.</param>
         public static void Init(string databaseId, string collectionId)
         {
+            LogUtility.LogInfoFunction("Entered Init.");
             GetOrCreateDatabase(databaseId).Wait();
             GetOrCreateCollection(databaseId, collectionId).Wait();
             LogUtility.LogInfoFunctionFinished();
@@ -603,6 +627,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public DocumentDBType GetDocumentDBType(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered GetDocumentDBType.");
             LogUtility.LogInfoFunction("Getting DocumentDBType");
             LogUtility.LogInfoFunctionFinished();
             return Configuration.Instance.DataStores.DocumentDB.
@@ -616,6 +641,7 @@ namespace BEArcus.Agent
         /// <returns></returns>
         public List<string> GetEndpointUrlAndAuthorizationKey(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered GetEndpointUrlAndAuthorizationKey.");
             List<string> list = new List<string>();
             string encryptedEndpointUrl = GetDocumentDBType(documentDBName).EndPointUrl;
             string decryptedEndpointUrl = SecurityController.Decrypt(encryptedEndpointUrl);

@@ -3,12 +3,10 @@
  * This software is licensed as described in the file LICENSE which is part of this repository    
  *****************************************************************************/
 
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Threading;
 using BEArcus.Agent;
 
 [assembly: Obfuscation(Exclude = true, ApplyToMembers = true, Feature = "renaming")]

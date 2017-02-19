@@ -10,6 +10,7 @@ namespace BEArcus.Agent
 
         public static void PurgeAlerts(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered PurgeAlerts.");
             DocumentDBDataController db = new DocumentDBDataController();
             db.CreateAlertStoredProcedure(documentDBName).Wait();
             db.Execute_spBulkDeleteAlerts(documentDBName).Wait();
@@ -18,6 +19,7 @@ namespace BEArcus.Agent
 
         public static void PurgeJobHistories(string documentDBName)
         {
+            LogUtility.LogInfoFunction("Entered PurgeJobHistories.");
             DocumentDBDataController db = new DocumentDBDataController();
             db.CreateJobHistoryStoredProcedure(documentDBName).Wait();
             db.Execute_spBulkDeleteJobHistories(documentDBName).Wait();

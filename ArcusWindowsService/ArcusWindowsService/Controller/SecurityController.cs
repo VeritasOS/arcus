@@ -26,6 +26,7 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered Encrypt.");
                 // first, convert the text to byte array 
                 byte[] originalText = Encoding.Unicode.GetBytes(text);
 
@@ -52,6 +53,7 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered Decrypt.");
                 // the encrypted text, converted to byte array 
                 byte[] encryptedText = Convert.FromBase64String(text);
 
@@ -80,6 +82,7 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered UpdateConfiguration.");
                 XmlDocument xmlDoc = new XmlDocument();
                 string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
                 //xmlDoc.Load(path + @"\Settings\Configuration.xml");            

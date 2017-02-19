@@ -24,6 +24,7 @@ namespace BEArcus.Agent
         {
             try
             {
+                LogUtility.LogInfoFunction("Entered LoadPowerShellScript.");
                 PowerShell powershell = PowerShell.Create();
 
                 powershell.AddScript(str, false);

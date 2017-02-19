@@ -14,19 +14,19 @@
     <div class="col-md-offset-2 col-md-8">
         <div class="panel panel-default">
             <div class="panel-body" style="max-height: 700px;overflow-y: scroll;">
-                <img src="~/Images/logo[2].png" />
+                @*<img src="~/Images/logo[2].png" />*@
                 <h2>@ViewBag.Title</h2>
                 <div>
                     <section id="DownloadForm">
                         @using (Html.BeginForm("DocumentDBCredentials", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                         {
-                            @Html.AntiForgeryToken()                           
-                            <hr />                           
-                                <h3>DocumentDB Account.</h3>
+                            @Html.AntiForgeryToken()
+                            <hr />
+                            <h3>DocumentDB Account.</h3>
                                 <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>DocumentDB is Microsoft's newest NoSQL document database platform that runs on Azure.</h5>
                                 <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>To use Microsoft Azure DocumentDB, you must create a DocumentDB database account using either the Azure portal, Resource Manager Templates, or Azure command-line interface (CLI). </h5>
                                 <h3>DocumentDB Database.</h3>
-                                <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>DocumentDB database account that you create will contain a database with Id <b> “ArcusRegistry”</b></h5>                              
+                                <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>DocumentDB database account that you create will contain a database with Id <b> “ArcusRegistry”</b></h5>
                                 <h3>DocumentDB Collection.</h3>
                                 <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>The <b>“ArcusRegistry”</b> database wil have four collections <b>“AlertCollection”, “JobCollection”, “JobHistoryCollection” and "MediaServerCollection"</b> for storing Alerts, Jobs, Job Histories and Backup Exec Media Server details respectively </h5>
                                 <h3>DocumentDB Schema.</h3>
