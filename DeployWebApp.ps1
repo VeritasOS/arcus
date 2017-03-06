@@ -1,4 +1,4 @@
-﻿Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+﻿Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
 function DeployWebApp
 {
 <#
@@ -93,3 +93,5 @@ while($site){
 Write-Host "Starting deployment...";
 New-AzureRmResourceGroupDeployment -TemplateUri $templateUri -siteName $siteName -hostingPlanName $hostingPlanName -ResourceGroupName $resourceGroupName -Verbose
 }
+
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Force
