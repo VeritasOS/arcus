@@ -1,4 +1,5 @@
-﻿function DeployWebApp
+﻿Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+function DeployWebApp
 {
 <#
   .SYNOPSIS
