@@ -24,6 +24,7 @@ namespace BEArcus.Agent
         private static string MediaServerCollectionName;
         private static string CustomerName;
         private static string AgentVersion;
+        private static string PurgeDBInterval;
         #endregion
 
 
@@ -158,6 +159,17 @@ namespace BEArcus.Agent
             }
         }
 
+        public static string PurgeDB
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(PurgeDBInterval))
+                {
+                    PurgeDBInterval = GetSetting("PurgeDBInterval");
+                }
+                return PurgeDBInterval;
+            }
+        }
 
         #region Helper function
 

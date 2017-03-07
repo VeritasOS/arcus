@@ -30,6 +30,7 @@ namespace BEArcus.Agent
         private static readonly string jobCollectionId = CommonSettings.JobCollection;
         private static readonly string jobHistoryCollectionId = CommonSettings.JobHistoryCollection;
         private static readonly string mediaServerCollectionId = CommonSettings.MediaServerCollection;
+        private int purgeDBInterval = Int32.Parse(CommonSettings.PurgeDB);
         private static DocumentClient client;
         private string EndpointUrl;
         private string AuthorizationKey;
@@ -539,7 +540,7 @@ namespace BEArcus.Agent
                 LogUtility.LogInfoFunction("Execute BulkDeleteJobHistories");
                 DateTime now = DateTime.Now;
                 //To get one month before Date
-                DateTime date = now.AddHours(-730);
+                DateTime date = now.AddHours(-purgeDBInterval);
                 var thresholdDate = date.ToString("yyyy-MM-dd");
 
                 // delete all documents that satisfy filter

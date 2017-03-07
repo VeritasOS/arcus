@@ -9,8 +9,9 @@
     <Setting Name="JobHistoryCollectionName" Value="JobHistoryCollection" />
     <Setting Name="MediaServerCollectionName" Value="MediaServerCollection" />
     <Setting Name="TimeInterval" Value="6000000" />
-    <Setting Name="AgentVersion" Value="1.0" />
-    <Setting Name="LogFilePath" Value="C:\ArcusLogs" />
+    <Setting Name="AgentVersion" Value="1.0"/>
+    <Setting Name="LogFilePath" Value="C:\ArcusLogs"/>
+    <Setting Name="PurgeDBInterval" Value="730"/>
   </CommonSettings>
   <DataStores>
     <FileSystem Name="FileStream1" AlertPath="E:\FS1_ALERT.json" JobPath="E:\FS1_JOB.json" JobHistoryPath="E:\FS1_JOBHISTORY.json" MediaServerPath="E:\FS1_MEDIASERVER.json" Enabled="false" />
