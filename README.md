@@ -26,6 +26,7 @@ Backup Exec Monitoring
 - If the Authentication / Authorization feature is not enabled, turn the switch to **On**.
 - Click **Azure Active Directory** , and then click **Express** under **Management Mode**.
 - Click **OK** to register the application in Azure Active Directory. This will create a new registration. If you want to choose an existing registration instead, click **Select an existing app** and then search for the name of a previously created registration within your tenant. Click the registration to select it and click **OK**. Then click **OK** on the Azure Active Directory settings blade.
+- To restrict access to your site to only users authenticated by Azure Active Directory, set Action to take when request is not authenticated to Log in with Azure Active Directory. 
 - Save the settings.
 
 ## 1.4	Add users to Azure AD
