@@ -253,22 +253,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Agent\AgentApp\ArcusWindowsService.exe" />
-    <Content Include="Agent\AgentApp\ArcusWindowsService.pdb" />
-    <Content Include="Agent\AgentApp\ArcusWindowsService.vshost.exe" />
-    <Content Include="Agent\AgentApp\DocumentDB.Spatial.Sql.dll" />
-    <Content Include="Agent\AgentApp\Microsoft.Azure.Documents.Client.dll" />
-    <Content Include="Agent\AgentApp\Microsoft.Azure.Documents.Client.xml" />
-    <Content Include="Agent\AgentApp\Microsoft.Azure.Documents.ServiceInterop.dll" />
-    <Content Include="Agent\AgentApp\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" />
-    <Content Include="Agent\AgentApp\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml" />
-    <Content Include="Agent\AgentApp\Newtonsoft.Json.dll" />
-    <Content Include="Agent\AgentApp\Newtonsoft.Json.xml" />
-    <Content Include="Agent\AgentApp\Server\PurgeData.js" />
-    <Content Include="Agent\AgentApp\Settings\Configuration.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Agent\AgentApp\System.Management.Automation.dll" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -288,16 +272,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Agent\AgentApp\ArcusWindowsService.exe.config" />
-    <Content Include="Agent\AgentApp\ArcusWindowsService.InstallLog" />
-    <Content Include="Agent\AgentApp\ArcusWindowsService.vshost.exe.config" />
-    <Content Include="Agent\AgentApp\ArcusWindowsService.vshost.exe.manifest" />
-    <Content Include="Agent\AgentApp\BEMCLIScripts\Alerts.psm1" />
-    <Content Include="Agent\AgentApp\BEMCLIScripts\JobHistory.psm1" />
-    <Content Include="Agent\AgentApp\BEMCLIScripts\Jobs.psm1" />
-    <Content Include="Agent\AgentApp\BEMCLIScripts\Main.ps1" />
-    <Content Include="Agent\AgentApp\BEMCLIScripts\MediaServer.psm1" />
-    <Content Include="Agent\AgentApp\InstallUtil.InstallLog" />
+    <Content Include="Agent\AgentApp.zip" />
     <None Include="Properties\PublishProfiles\ArcusPortal.pubxml" />
     <None Include="Properties\PublishProfiles\ArcusWebApp.pubxml" />
     <None Include="Properties\PublishProfiles\bearcus-sri-1.pubxml" />
@@ -360,6 +335,7 @@
     <Content Include="Views\Account\DocumentDBDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Agent\AgentApp\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
