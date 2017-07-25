@@ -12,12 +12,12 @@ Backup Exec Monitoring
 - Load the PowerShell script DeployWebApp.ps1
 - Run the PowerShell command: DeployWebApp –subscriptionId &quot;&lt;subscription Id&gt;&quot; -resourceGroupName &quot;&lt;Resource Group&gt;&quot; –siteName &quot;&lt;unique site name&gt;&quot; –hostingPlanName -&lt;hosting plane name&gt;
 
-## 1.2	Create DocumentDB Database account
+## 1.2	Create CosmosDB Database account
 
 - Sign in to the Azure portal.
-- In the Jump bar, click New, click Databases, and then click DocumentDB (NoSQL).
-- In the New account blade, specify the desired configuration for the DocumentDB account.
-- Once the new DocumentDB account options are configured, click Create. To check the status of the deployment, check the Notifications hub.
+- In the Jump bar, click New, click Databases, and then click CosmosDB (NoSQL).
+- In the New account blade, specify the desired configuration for the CosmosDB account.
+- Once the new CosmosDB account options are configured, click Create. To check the status of the deployment, check the Notifications hub.
 - Find the End point URL and Authorization Key in the keys blade
 
 ## 1.3	Turn on Authentication and Authorization for the Web Application deployed
@@ -42,7 +42,7 @@ Backup Exec Monitoring
 
 ## 1.5	Provide Endpoint URL and Authorization key in Arcus portal and Download the Agent Application
 
-- Login to the Arcus portal and provide the Endpoint URL and Authorization key to DocumentDB credentials page.
+- Login to the Arcus portal and provide the Endpoint URL and Authorization key to CosmosDB credentials page.
 - Download the Agent Application from the portal.
 - Share the Agent Application with customers. (To run the Agent Application on media servers whose data is to be monitored. )
 
