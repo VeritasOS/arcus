@@ -93,6 +93,30 @@ function LoadBEMCLIModule
             }
 		}       
 
+		 if(($BERegPath -eq $null) -or ($BERegPath.Path -eq $null) -or ($BERegPath.Path -eq ""))
+		{
+			$BERegKey = "HKLM:\SOFTWARE\Symantec\Backup Exec For Windows\Backup Exec\20.0\Install"
+			
+			if (Test-Path $BERegKey)
+            {
+			#Reading registry key for 20.0 BE Installation Path
+			
+			    $BERegPath = Get-ItemProperty $BERegKey
+            }
+		}    
+		
+		 if(($BERegPath -eq $null) -or ($BERegPath.Path -eq $null) -or ($BERegPath.Path -eq ""))
+		{
+			$BERegKey = "HKLM:\SOFTWARE\Symantec\Backup Exec For Windows\Backup Exec\*\Install"
+			
+			if (Test-Path $BERegKey)
+            {
+			#Reading registry key for BE Installation Path
+			
+			    $BERegPath = Get-ItemProperty $BERegKey
+            }
+		}       
+
         #append BEMCLI module path with BE installation path 
         $BEMCLIModulePath = $BERegPath.Path + "Modules\BEMCLI" 
 
