@@ -14,6 +14,7 @@ namespace BEArcus.WebApp.Models
     {
         public string Name { get; set; }
         public string be_id { get; set; }
+        public string Id { get; set; }
         public DateTime Date { get; set; }
         public string Severity { get; set; }
         public string Category { get; set; }

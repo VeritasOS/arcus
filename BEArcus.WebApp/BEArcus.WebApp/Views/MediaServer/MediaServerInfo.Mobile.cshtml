@@ -1,0 +1,203 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+}
+
+@{
+    ViewBag.Title = "Monitor Page";
+    var medialist = Model.Select(o => o.Name).Distinct();
+    List<BEArcus.WebApp.Models.Alert>
+    alerts = ViewBag.Alerts;
+    List<BEArcus.WebApp.Models.JobHistory>
+    failedJobs = ViewBag.FailedJobs;
+    List<BEArcus.WebApp.Models.JobHistory>
+    missedJobs = ViewBag.MissedJobs;
+    List<BEArcus.WebApp.Models.JobHistory>
+    succeededJobs = ViewBag.SucceededJobs;
+    List<BEArcus.WebApp.Models.JobHistory>
+    succeededWithExceptionsJobs = ViewBag.SucceededWithExceptions;
+    var jobs = ViewBag.Jobs;
+}
+
+@{
+    var i = 1;
+}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div class="preLoad">
+    <img id="loading-image" style="width:10%; display: block; margin-left:auto; margin-top:120px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div>
+    <div data-position="fixed" style="margin-bottom:15px;">
+        <a href="javascript:void(0);" onclick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span></a>
+    </div>
+
+    <div id="customerTable" class="ui-mini">
+        @foreach (var medianame in medialist)
+        {
+            if (medianame.Equals(ViewBag.MediaServer))
+            {
+
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h4><span class="glyphicon glyphicon-user" style="margin-right:25px;"></span>@medianame</h4></div>
+                    <div class="panel-body ui-mini">
+
+                        <table id="table@(i)" class="table-responsive">
+                            @{var mediaServer0 = Model.Where(o => o.Name.Equals(medianame));}
+                            @foreach (var media in mediaServer0)
+                            {
+                                if (media.Name.Equals(ViewBag.MediaServer))
+                                {
+                                    <tr>
+                                        <th>@Html.DisplayName("Backup Exec Server")</th>
+                                        <td>
+                                            <strong>
+                                                <label>@media.Name</label>
+                                            </strong>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>
+                                            <strong>
+                                                @Html.DisplayName("Backup Exec Version")
+                                            </strong>
+                                        </th>
+
+                                        <td>
+                                            <strong>
+                                                <label>@media.Version.Substring(0, @media.Version.IndexOf(" "))</label>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <strong>
+                                                @Html.DisplayName("Last Update")
+                                            </strong>
+                                        </th>
+                                        <td>
+                                            <strong>
+                                                <label>@media.LastUpdate</label>
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <strong>
+                                                @Html.DisplayName("Critical Alerts")
+                                            </strong>
+                                        </th>
+                                        <td>
+                                            <strong>
+                                                @Html.Label(alerts.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <strong>
+                                                @Html.DisplayName("Failed Jobs")
+                                            </strong>
+                                        </th>
+                                        <td>
+                                            <strong>
+                                                @Html.Label(failedJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <strong>
+                                                @Html.DisplayName("Missed Jobs")
+                                            </strong>
+                                        </th>
+                                        <td>
+                                            <strong>
+                                                @Html.Label(missedJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <strong>
+                                                @Html.DisplayName("Successful Jobs")
+                                            </strong>
+                                        </th>
+                                        <td>
+                                            <strong>
+                                                @Html.Label(succeededJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>@Html.DisplayName("Jobs Completed with Exceptions")</th>
+                                        <td>
+                                            <strong>
+                                                @Html.Label(succeededWithExceptionsJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </table>
+
+                        <div id=@i name="piechart"></div>
+
+                    </div>
+                </div>
+                i++;
+            }
+        }
+    </div>
+</div>
+
+<script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+            for(j=1;j<=@i-1;j++){
+                var Failed=0;
+                var Missed=0;
+                var Succeeded=0;
+                var Exception=0;
+                var r =  document.getElementById("table" + j).rows[0].cells.length;
+
+                for(k=1;k<=r-1;k++){
+                    Failed=Failed+parseInt(document.getElementById("table"+j).rows[4].cells[k].textContent);
+                    Missed=Missed+parseInt(document.getElementById("table"+j).rows[5].cells[k].textContent);
+                    Succeeded=Succeeded+parseInt(document.getElementById("table"+j).rows[6].cells[k].textContent);
+                    Exception=Exception+parseInt(document.getElementById("table"+j).rows[7].cells[k].textContent);
+                }
+
+                var data = google.visualization.arrayToDataTable([
+                  ['Task', 'Hours per Day'],
+                  ['Failed', Failed],
+                  ['Missed',Missed],
+                  ['Succeeded',Succeeded],
+                  ['Succeeded with Exception',Exception]
+                ]);
+
+                var options = {
+                    title: 'Job Status for all Backup Exec Media Servers',
+                    is3D: true,
+                    pieSliceText: 'none',
+                    colors:['#FF0000','#800080','#008000','#FFFF00']
+
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById(j));
+                chart.draw(data, options);
+            }
+        }
+</script>

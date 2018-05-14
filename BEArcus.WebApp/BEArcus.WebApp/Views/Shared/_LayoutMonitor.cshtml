@@ -3,13 +3,13 @@
  * This software is licensed as described in the file LICENSE which is part of this repository
  *****************************************************************************/
 -->
-
 @model IEnumerable<BEArcus.WebApp.Models.MediaServer>
 @{
     ViewBag.Title = "SideBarView";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @{ var customers = Model.Select(o => o.CustomerName).Distinct(); }
+@Html.Partial("_ViewSwitcher")
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <div id="sidebar">

@@ -3,22 +3,20 @@
  * This software is licensed as described in the file LICENSE which is part of this repository
  *****************************************************************************/
 -->
-
 @model IEnumerable<BEArcus.WebApp.Models.JobHistory>
-
 @{
     Layout = null;
 }
 @{
     string mediaServer = ViewBag.Mediaserver;
-    IEnumerable<string> Name = Model.Select(o => o.Name).Distinct();
-    Name = Name.Concat(new[] { "All" });
+    IEnumerable<string> Name = new[] { "All" };
+    Name = Name.Concat(Model.Select(o => o.Name).Distinct());
     IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
     BE_id = BE_id.Concat(new[] { "All" });
-    IEnumerable<string> JobType = Model.Select(o => o.JobType).Distinct();
-    JobType = JobType.Concat(new[] { "All" });
-    IEnumerable<string> JobStatus = Model.Select(o => o.JobStatus).Distinct();
-    JobStatus = JobStatus.Concat(new[] { "All" });
+    IEnumerable<string> JobType = new[] { "All" };
+    JobType = JobType.Concat(Model.Select(o => o.JobType).Distinct());
+    IEnumerable<string> JobStatus = new[] { "All" };
+    JobStatus = JobStatus.Concat(Model.Select(o => o.JobStatus).Distinct());
     IEnumerable<string> StartTime = Model.Select(o => o.StartTime.ToString("s") + "Z").Distinct();
     StartTime = StartTime.Concat(new[] { "All" });
     IEnumerable<string> EndTime = Model.Select(o => o.EndTime.ToString("s") + "Z").Distinct();
@@ -71,7 +69,6 @@
                 </th>
                 <th></th>
             </tr>
-
             @foreach (var item in Model)
             {
                 var style = (item.JobStatus.Equals("Error")) ? "color:red" : "";
@@ -103,10 +100,8 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.ErrorCode)
                     </td>
-
                 </tr>
             }
-
         </table>
     </div>
     <script>

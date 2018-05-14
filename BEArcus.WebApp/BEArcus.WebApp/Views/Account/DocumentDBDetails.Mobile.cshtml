@@ -1,0 +1,50 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+@model List<string>
+@{
+    Layout = "~/Views/Shared/_LayoutMonitor.Mobile.cshtml";
+}
+@{
+    ViewBag.Title = "Why to Create a CosmosDB Account ?";
+}
+
+<div class="row ui-mini">
+    <div class="panel panel-default">
+        <div class="panel-body" style="overflow-y: scroll;">
+            <h3>@ViewBag.Title</h3>
+            <div>
+                <section id="DownloadForm">
+                    @using (Html.BeginForm("DocumentDBCredentials", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <hr />
+                        <h4>CosmosDB Account.</h4>
+                        <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>CosmosDB is Microsoft's newest NoSQL document database platform that runs on Azure.</h5>
+                        <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>To use Microsoft Azure CosmosDB, you must create a CosmosDB database account using either the Azure portal, Resource Manager Templates, or Azure command-line interface (CLI). </h5>
+                        <h4>CosmosDB Database.</h4>
+                        <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>CosmosDB database account that you create will contain a database with Id <b> “ArcusRegistry”</b></h5>
+                        <h4>CosmosDB Collection.</h4>
+                        <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>The <b>“ArcusRegistry”</b> database will have four collections <b>“AlertCollection”, “JobCollection”, “JobHistoryCollection” and "MediaServerCollection"</b> for storing Alerts, Jobs, Job Histories and Backup Exec Media Server details respectively </h5>
+                        <h4>CosmosDB Schema.</h4>
+                        <img style="width:95%; height:600px" src="~/Images/DocumentDBSchema1.png" />
+                        <div class="form-group">
+                            <div class="ui-grid-a" data-position="fixed">
+                                <div class="ui-block-a">
+                                    <input style="margin-left:10px;" type="submit" value="Back" class="ui-btn ui-shadow ui-corner-all ui-mini " />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

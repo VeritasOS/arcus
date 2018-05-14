@@ -28,11 +28,155 @@ namespace BEArcus.WebApp.Controllers
             try
             {
                 ViewBag.DateSortParm = "date_desc";
-
                 IEnumerable<Alert> alerts = DocumentDBDataController.GetAlerts(mediaServer);
                 ViewBag.Mediaserver = mediaServer;
                 ViewBag.Alerts = alerts;
+                if (ViewBag.Name == null)
+                    ViewBag.Name = "Name";
+                if (ViewBag.Severity == null)
+                    ViewBag.Severity = "Severity";
+                if (ViewBag.Category == null)
+                    ViewBag.Category = "Category";
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
                 return View(alerts);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the MediaServers and returns the AlertTab view.
+        /// </summary>
+        /// <param name="mediaServer"></param>
+        /// <returns></returns>
+        public ActionResult AlertTab(string mediaServer)
+        {
+            Trace.WriteLine("Entering AlertTab method");
+            try
+            {
+                ViewBag.DateSortParm = "date_desc";
+                ViewBag.Mediaserver = mediaServer;
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                return View(mediaServer1);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the  Alerts and returns the AlertSingle view.
+        /// </summary>
+        /// <param name="mediaServer"></param>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public ActionResult AlertSingle(string mediaServer, string Id)
+        {
+            Trace.WriteLine("Entering AlertSingle method");
+            try
+            {
+                IEnumerable<Alert> alerts = DocumentDBDataController.GetAlerts(mediaServer);
+                ViewBag.Mediaserver = mediaServer;
+                ViewBag.Alerts = alerts;
+                ViewBag.Id = Id;
+                return View(alerts);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the MediaServers and returns the JobTab view.
+        /// </summary>
+        /// <param name="mediaServer"></param>
+        /// <returns></returns>
+        public ActionResult JobTab(string mediaServer)
+        {
+            Trace.WriteLine("Entering JobTab method");
+            try
+            {
+                ViewBag.DateSortParm = "date_desc";
+                ViewBag.Mediaserver = mediaServer;
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                return View(mediaServer1);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the Jobs and returns the JobSingle view.
+        /// </summary>
+        /// <param name="mediaServer"></param>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public ActionResult JobSingle(string mediaServer, string Id)
+        {
+            Trace.WriteLine("Entering JobSingle method");
+            try
+            {
+                ViewBag.Id = Id;
+                var jobs = DocumentDBDataController.GetJobs(mediaServer);
+                ViewBag.Mediaserver = mediaServer;
+                ViewBag.Jobs = jobs;
+                return View(jobs);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the MediaServers and returns the JobHistoryTab view.
+        /// </summary>
+        /// <param name="mediaServer"></param>
+        /// <returns></returns>
+        public ActionResult JobHistoryTab(string mediaServer)
+        {
+            Trace.WriteLine("Entering JobHistoryTab method");
+            try
+            {
+                ViewBag.DateSortParm = "date_desc";
+                ViewBag.Mediaserver = mediaServer;
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                return View(mediaServer1);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the JobHistory and returns the JobHistorySingle view.
+        /// </summary>
+        /// <param name="mediaServer"></param>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public ActionResult JobHistorySingle(string mediaServer, string Id)
+        {
+            Trace.WriteLine("Entering JobHistorySingle method");
+            try
+            {
+                ViewBag.Id = Id;
+                var jobHistories = DocumentDBDataController.GetJobHistories(mediaServer);
+
+                ViewBag.Mediaserver = mediaServer;
+                return View(jobHistories);
             }
             catch (Exception ex)
             {
@@ -142,14 +286,18 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetAlertName method");
             ModelState.Remove("Name");
+            ViewBag.Severity = "Severity";
+            ViewBag.Category = "Category";
             if (Name.Equals("All"))
             {
                 IEnumerable<Alert> alerts2 = DocumentDBDataController.GetAlerts(media);
                 ViewBag.Mediaserver = media;
+                ViewBag.Name = "All";
                 return PartialView("Alert", alerts2);
             }
             var alerts1 = DocumentDBDataController.GetAlertsByName(Name, media);
             ViewBag.Mediaserver = media;
+            ViewBag.Name = Name;
             return PartialView("Alert", alerts1);
         }
 
@@ -164,12 +312,16 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetSeverity method");
             ModelState.Clear();
+            ViewBag.Name = "Name";
+            ViewBag.Category = "Category";
             if (Severity.Equals("All"))
             {
                 IEnumerable<Alert> alerts2 = DocumentDBDataController.GetAlerts(media);
                 ViewBag.Mediaserver = media;
+                ViewBag.Severity = "All";
                 return PartialView("Alert", alerts2);
             }
+            ViewBag.Severity = Severity;
             var alerts1 = DocumentDBDataController.GetAlertsBySeverity(Severity, media);
             ViewBag.Mediaserver = media;
             return PartialView("Alert", alerts1);
@@ -186,6 +338,10 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetCategory method");
             ModelState.Clear();
+            ViewBag.Name = "Name";
+            ViewBag.Severity = "Severity";
+            ViewBag.Category = Category;
+
             if (Category.Equals("All"))
             {
                 IEnumerable<Alert> alerts2 = DocumentDBDataController.GetAlerts(media);
@@ -210,6 +366,14 @@ namespace BEArcus.WebApp.Controllers
             var jobs = DocumentDBDataController.GetJobs(mediaServer);
             ViewBag.Mediaserver = mediaServer;
             ViewBag.Jobs = jobs;
+            if (ViewBag.Name == null)
+                ViewBag.Name = "Name";
+            if (ViewBag.TaskName == null)
+                ViewBag.TaskName = "Task Name";
+            if (ViewBag.JobType == null)
+                ViewBag.JobType = "Job Type";
+            if (ViewBag.Status == null)
+                ViewBag.Status = "Status";
             return View(jobs);
         }
 
@@ -224,6 +388,10 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetJobName method");
             ModelState.Clear();
+            ViewBag.Name = Name;
+            ViewBag.TaskName = "Task Name";
+            ViewBag.JobType = "Job Type";
+            ViewBag.Status = "Status";
             if (Name.Equals("All"))
             {
                 var jobs2 = DocumentDBDataController.GetJobs(media);
@@ -247,6 +415,10 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetTaskName method");
             ModelState.Clear();
+            ViewBag.Name = "Name";
+            ViewBag.TaskName = TaskName;
+            ViewBag.JobType = "Job Type";
+            ViewBag.Status = "Status";
             if (TaskName.Equals("All"))
             {
                 var jobs2 = DocumentDBDataController.GetJobs(media);
@@ -269,6 +441,10 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetJobType method");
             ModelState.Clear();
+            ViewBag.Name = "Name";
+            ViewBag.TaskName = "Task Name";
+            ViewBag.JobType = JobType;
+            ViewBag.Status = "Status";
             if (JobType.Equals("All"))
             {
                 var jobs2 = DocumentDBDataController.GetJobs(media);
@@ -291,6 +467,10 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetStatus method");
             ModelState.Clear();
+            ViewBag.Name = "Name";
+            ViewBag.TaskName = "Task Name";
+            ViewBag.JobType = "Job Type";
+            ViewBag.Status = Status;
             if (Status.Equals("All"))
             {
                 var jobs2 = DocumentDBDataController.GetJobs(media);
@@ -312,7 +492,12 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering JobHistory method");
             ViewBag.DateSortParm = "date_desc";
-
+            if (ViewBag.Name == null)
+                ViewBag.Name = "Name";
+            if (ViewBag.Status == null)
+                ViewBag.Status = "Status";
+            if (ViewBag.Type == null)
+                ViewBag.Type = "Type";
             var jobHistories = DocumentDBDataController.GetJobHistories(mediaServer);
             ViewBag.Mediaserver = mediaServer;
             return View(jobHistories);
@@ -328,6 +513,9 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetJobHistoryName method");
             ModelState.Clear();
+            ViewBag.Name = Name;
+            ViewBag.Status = "Status";
+            ViewBag.Type = "Type";
             if (Name.Equals("All"))
             {
                 var jobHistories2 = DocumentDBDataController.GetJobHistories(media);
@@ -350,6 +538,9 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetJobHistoryStatus method");
             ModelState.Clear();
+            ViewBag.Name = "Name";
+            ViewBag.Status = JobStatus;
+            ViewBag.Type = "Type";
             if (JobStatus.Equals("All"))
             {
                 var jobHistories2 = DocumentDBDataController.GetJobHistories(media);
@@ -371,6 +562,9 @@ namespace BEArcus.WebApp.Controllers
         {
             Trace.WriteLine("Entering GetJobHistoryType method");
             ModelState.Clear();
+            ViewBag.Name = "Name";
+            ViewBag.Status = "Status";
+            ViewBag.Type = JobType;
             if (JobType.Equals("All"))
             {
                 var jobHistories2 = DocumentDBDataController.GetJobHistories(media);
@@ -419,7 +613,73 @@ namespace BEArcus.WebApp.Controllers
                 ViewBag.MissedJobs = DocumentDBDataController.GetMissedJobHistories();
                 ViewBag.SucceededJobs = DocumentDBDataController.GetSucceededJobHistories();
                 ViewBag.SucceededWithExceptions = DocumentDBDataController.GetExceptionJobHistories();
+                if (ViewBag.Group == null)
+                    ViewBag.Group = "Select Group";
+                if (ViewBag.TimeFilter == null)
+                    ViewBag.TimeFilter = "Time Filter";
                 return View(mediaServer);
+            }
+            catch (Exception ex)
+            {
+                Exception baseException = ex.GetBaseException();
+                Trace.TraceError("Error:" + ex.Message + "Message:" + baseException.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Returns the filtered data to Home Page view
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public ActionResult GetCustomer(string customer)
+        {
+
+            Trace.WriteLine("Entering GetCustomer method");
+            ViewBag.TimeFilter = "Time Filter";
+            if (customer.Equals("All"))
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetching Media servers, critical alerts, failed Jobs, Missed Jobs, Succeeded jobs and Job completed with exception");
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                ViewBag.Alerts = DocumentDBDataController.GetCrititcalAlerts();
+                ViewBag.FailedJobs = DocumentDBDataController.GetFailedJobHistories();
+                ViewBag.MissedJobs = DocumentDBDataController.GetMissedJobHistories();
+                ViewBag.SucceededJobs = DocumentDBDataController.GetSucceededJobHistories();
+                ViewBag.SucceededWithExceptions = DocumentDBDataController.GetExceptionJobHistories();
+                ViewBag.Group = "All";
+                return PartialView("HomePage", mediaServer1);
+            }
+
+            var mediaServer = DocumentDBDataController.GetMediaServersByCustomerName(customer);
+            ViewBag.Alerts = DocumentDBDataController.GetCrititcalAlerts();
+            ViewBag.FailedJobs = DocumentDBDataController.GetFailedJobHistories();
+            ViewBag.MissedJobs = DocumentDBDataController.GetMissedJobHistories();
+            ViewBag.SucceededJobs = DocumentDBDataController.GetSucceededJobHistories();
+            ViewBag.SucceededWithExceptions = DocumentDBDataController.GetExceptionJobHistories();
+            ViewBag.Group = customer;
+            return PartialView("HomePage", mediaServer);
+        }
+
+
+        /// <summary>
+        /// Gets the Media server, Critical alerts and Job status information and returns MediaServerInfo View
+        /// </summary>
+        /// <param name="mediaServer"></param>
+        /// <returns></returns>
+        public ActionResult MediaServerInfo(string mediaServer)
+        {
+            Trace.WriteLine("Entering MediaServerInfo method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetching  critical alerts, failed Jobs, Missed Jobs, Succeeded jobs and Job completed with exception");
+                ViewBag.MediaServer = mediaServer;
+                ViewBag.Alerts = DocumentDBDataController.GetCrititcalAlerts();
+                ViewBag.FailedJobs = DocumentDBDataController.GetFailedJobHistories();
+                ViewBag.MissedJobs = DocumentDBDataController.GetMissedJobHistories();
+                ViewBag.SucceededJobs = DocumentDBDataController.GetSucceededJobHistories();
+                ViewBag.SucceededWithExceptions = DocumentDBDataController.GetExceptionJobHistories();
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                return View(mediaServer1);
             }
             catch (Exception ex)
             {
@@ -451,6 +711,237 @@ namespace BEArcus.WebApp.Controllers
         }
 
         /// <summary>
+        /// Gets the Media server information and returns the GroupPage view
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GroupPage()
+        {
+            Trace.WriteLine("Entering GroupPage method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer = DocumentDBDataController.GetMediaServers();
+                return View(mediaServer);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+
+        }
+
+        /// <summary>
+        /// Gets the Media server information and returns the GroupInfo view
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GroupInfo(string customer)
+        {
+            Trace.WriteLine("Entering GroupInfo method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                ViewBag.CustomerData = customer;
+                var mediaServer = DocumentDBDataController.GetMediaServers();
+                return View(mediaServer);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+
+        }
+
+        /// <summary>
+        /// Remove the Group and return GroupPage View
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public async Task<ActionResult> RemoveGroup(string customer)
+        {
+            Trace.WriteLine("Entering RemoveGroup method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                var medialist = mediaServer1.Where(o => o.CustomerName.Equals(customer));
+                var mediaServer = medialist.Select(o => o.Name).Distinct();
+                await DocumentDBDataController.SaveGroupData("", "", mediaServer, "All BE Servers");
+                var mediaServer2 = DocumentDBDataController.GetMediaServers();
+                ViewBag.MediaServer = mediaServer2;
+                return RedirectToAction("GroupPage", "MediaServer");
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the Media server information and returns the GroupRename view
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public ActionResult GroupRename(string customer)
+        {
+            Trace.WriteLine("Entering GroupRename method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer = DocumentDBDataController.GetMediaServers();
+                ViewBag.Group = customer;
+                return View(mediaServer);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+
+        }
+
+        /// <summary>
+        /// Rename the Group and return GroupPage View
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public async Task<ActionResult> GroupRenameFinal(string customer, string name)
+        {
+            Trace.WriteLine("Entering GroupRenameFinal method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                var medialist = mediaServer1.Where(o => o.CustomerName.Equals(customer));
+                var mediaServer = medialist.Select(o => o.Name).Distinct();
+                await DocumentDBDataController.SaveGroupData("", "", mediaServer, name);
+                return RedirectToAction("GroupPage", "MediaServer");
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the Media server information and returns the GroupNew view
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GroupNew()
+        {
+            Trace.WriteLine("Entering GroupNew method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer = DocumentDBDataController.GetMediaServers();
+                return View(mediaServer);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Create new Group and return GroupPage View
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <param name="mediaServer"></param>
+        /// <returns></returns>
+        public async Task<ActionResult> GroupNewFinal(string customer, string[] mediaServer)
+        {
+            Trace.WriteLine("Entering GroupNewFinal method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                var medialist = mediaServer1.Where(o => o.CustomerName.Equals(customer));
+                await DocumentDBDataController.SaveGroupData("", "", mediaServer, customer);
+                return RedirectToAction("GroupPage", "MediaServer");
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+
+        }
+
+        /// <summary>
+        /// Remove the Media servers from Group and returns the GroupInfo view
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public async Task<ActionResult> GroupRemoveServers(string customername, string customer, string[] mediaServer)
+        {
+            Trace.WriteLine("Entering GroupRemoveServers method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                var medialist = mediaServer1.Where(o => o.CustomerName.Equals(customer));
+                await DocumentDBDataController.SaveGroupData("", "", mediaServer, customer);
+                ViewBag.CustomerData = customer;
+                return RedirectToAction("GroupInfo", "MediaServer", new { @customer = customername });
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Gets the Media server information and returns the GroupAddServers view
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public ActionResult GroupAddServers(string customer)
+        {
+            Trace.WriteLine("Entering GroupAddServers method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer = DocumentDBDataController.GetMediaServers();
+                ViewBag.Group = customer;
+                return View(mediaServer);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
+        /// Add Media servers into the Group and returns the GroupInfo view
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
+        public async Task<ActionResult> GroupAddServersFinal(string customer, string[] mediaServer)
+        {
+            Trace.WriteLine("Entering GroupAddServersFinal method");
+            try
+            {
+                Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Fetch the Media Server details");
+                var mediaServer1 = DocumentDBDataController.GetMediaServers();
+                var medialist = mediaServer1.Where(o => o.CustomerName.Equals(customer));
+                await DocumentDBDataController.SaveGroupData("", "", mediaServer, customer);
+                return RedirectToAction("GroupInfo", "MediaServer", new { @customer = customer });
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Error:" + ex.Message);
+                return View("Error");
+            }
+        }
+
+        /// <summary>
         /// Returns the Create Group Partial view
         /// </summary>
         /// <returns></returns>
@@ -477,7 +968,7 @@ namespace BEArcus.WebApp.Controllers
         /// <returns></returns>
         public async Task<ActionResult> SaveGroupData(string[] mediaServer, string customer)
         {
-            Trace.WriteLine("Entering GetGroupData method");
+            Trace.WriteLine("Entering SaveGroupData method");
             IEnumerable<string> mediServer = mediaServer.AsEnumerable();
 
             await DocumentDBDataController.SaveGroupData("", "", mediaServer, customer);
@@ -498,6 +989,7 @@ namespace BEArcus.WebApp.Controllers
         public ActionResult FilteredImportantEvents(IEnumerable<MediaServer> mediaServer, List<Alert> alerts, List<JobHistory> failedJobs, List<JobHistory> missedJobs, List<JobHistory> succeededJobs, List<JobHistory> succeededWithExceptionsJobs, string TimeFilter)
         {
             Trace.WriteLine("Entering FileterImportatntEvents method");
+            ViewBag.Group = "Select Group";
             var media = DocumentDBDataController.GetMediaServers();
             List<Alert> alert = DocumentDBDataController.GetCrititcalAlerts();
             List<JobHistory> failedJob = DocumentDBDataController.GetFailedJobHistories();
@@ -511,8 +1003,19 @@ namespace BEArcus.WebApp.Controllers
                 ViewBag.MissedJobs = missedJob;
                 ViewBag.SucceededJobs = succeededJob;
                 ViewBag.SucceededWithExceptions = succeededWithExceptionsJob;
+                ViewBag.TimeFilter = "All";
                 return PartialView("HomePage", media);
             }
+            if (TimeFilter.Equals("-24"))
+                ViewBag.TimeFilter = "24 hrs";
+            if (TimeFilter.Equals("-48"))
+                ViewBag.TimeFilter = "48 hrs";
+            if (TimeFilter.Equals("-72"))
+                ViewBag.TimeFilter = "72 hrs";
+            if (TimeFilter.Equals("-168"))
+                ViewBag.TimeFilter = "1 Week";
+            if (TimeFilter.Equals("-730"))
+                ViewBag.TimeFilter = "1 Month";
             int hrs = Convert.ToInt32(TimeFilter);
             DateTime now = DateTime.Now;
             ViewBag.Alerts = alert.Where(o => o.Date > now.AddHours(hrs) && o.Date <= now).ToList();
@@ -619,5 +1122,14 @@ namespace BEArcus.WebApp.Controllers
             return File(chart, "image/bytes");
         }
 
+
+        /// <summary>
+        /// Close the application
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Exit()
+        {
+            return View("Exit");
+        }
     }
 }

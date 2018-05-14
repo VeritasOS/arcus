@@ -24,6 +24,9 @@
 
   .PARAMETER parametersFilePath
   Optional, path to the parameters file. Defaults to parameters.json. If file is not found, will prompt for parameter values based on template.
+
+  .PARAMETER $existingSite
+  To specify the existing website or new website.
 #>
 
 param(
@@ -47,8 +50,12 @@ param(
 
   [Parameter(Mandatory=$True)]
   [string]
-  $hostingPlanName
-  
+  $hostingPlanName,
+
+  [Parameter(Mandatory=$True)]
+  [string]
+  $existingSite
+   
 )
 
 #******************************************************************************
@@ -56,10 +63,11 @@ param(
 # Execution begins here 
 #******************************************************************************
 $ErrorActionPreference = "Stop"
+$Value = "Yes"
 
 # sign in
 Write-Host "Logging in...";
-Add-AzureRmAccount;
+Add-AzureAccount;
 
 # select subscription
 Write-Host "Selecting subscription '$subscriptionId'";
@@ -80,15 +88,40 @@ else{
   Write-Host "Using existing resource group '$resourceGroupName'";
 }
 
-#check if the website name is available
-$site=Test-AzureName -Website $siteName
-while($site){
- Write-Host "Site name '$siteName' already in use. Provide some other name.";
- $siteName=Read-Host "SiteName";
- $site=Test-AzureName -Website $siteName
-}
+
 
 # Start the deployment
 Write-Host "Starting deployment...";
-New-AzureRmResourceGroupDeployment -TemplateUri $templateUri -siteName $siteName -hostingPlanName $hostingPlanName -ResourceGroupName $resourceGroupName -Verbose
+
+    If($existingSite -eq $Value)
+    {
+    $site=Test-AzureName -Website $siteName -ErrorAction SilentlyContinue
+     If($site)
+        {
+        # Remove existing webapp;
+        Remove-AzureRmWebApp -ResourceGroupName $resourceGroupName -Name $siteName;
+        Remove-AzureRmAppServicePlan -Name $hostingPlanName -ResourceGroupName $resourceGroupName -Force;
+        }
+
+    # Deploy new webapp;
+    New-AzureRmResourceGroupDeployment -TemplateUri $templateUri -siteName $siteName -hostingPlanName $hostingPlanName -ResourceGroupName $resourceGroupName -Verbose;
+
+    }
+
+    Else
+    {
+    $site=Test-AzureName -Website $siteName
+    while($site)
+        {
+        Write-Host "Site name '$siteName' already in use. Provide some other name.";
+        $siteName=Read-Host "SiteName";
+        $site=Test-AzureName -Website $siteName
+        }
+
+    # Start the deployment
+    Write-Host "Starting deployment...";
+    New-AzureRmResourceGroupDeployment -TemplateUri $templateUri -siteName $siteName -hostingPlanName $hostingPlanName -ResourceGroupName $resourceGroupName -Verbose
+    }
+
 }
+ 

@@ -16,6 +16,7 @@ namespace BEArcus.WebApp.Models
         public string Name { get; set; }             
         public string be_id { get; set; }
         [Display(Name = "Backup Type")]
+        public string Id { get; set; }
         public string TaskName { get; set; }      
         public string JobType { get; set; }        
         public Storage Storage { get; set; }      

@@ -1,0 +1,45 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+@model List<string>
+@{
+    Layout = "~/Views/Shared/_LayoutMonitor.Mobile.cshtml";
+}
+@{
+    ViewBag.Title = "Guidelines to download and run Agent Application";
+}
+<div class=" ui-mini">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>@ViewBag.Title.</h4>
+            <section id="DownloadForm">
+                @using (Html.BeginForm("HomePage", "MediaServer", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <hr />
+                    <h4>Step 1</h4>
+                    <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>Download the Agent Application form here @Html.ActionLink("Download", "Download")</h5>
+                    <h4>Step 2</h4>
+                    <h4>Run the Agent Application by:</h4>
+                    <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>Installing the ArcusService using command: "C:\Windows\Microsoft.NET\Framework <br>\v4.0.30319\installutil.exe"<br> "Path to ArcusWindowsService.exe" </h5>
+                    <h5 style="margin-left:60px;"><b>AND</b></h5>
+                    <h5 style="margin-left:10px;"><span class="glyphicon glyphicon-chevron-right" style="margin-right: 10px;"></span>Run the ArcusService.</h5>
+                    <h5>After you run the application it will push the alerts, jobs and job history data to the server. And you can view the data by connecting to this portal.</h5>
+                    <div class="form-group">
+                        <div class="ui-grid-a" data-position="fixed">
+                            <div class="ui-block-a">
+                                <input type="button" value="Finish" style="margin-left:15px;" class="ui-btn ui-shadow ui-corner-all ui-mini" onclick="location.href='@Url.Action("HomePage", "MediaServer")'" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

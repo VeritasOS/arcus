@@ -1,0 +1,216 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+@{
+    var customers = Model.Select(o => o.CustomerName).Distinct();
+    List<BEArcus.WebApp.Models.Alert> alerts = ViewBag.Alerts;
+    List<BEArcus.WebApp.Models.JobHistory> failedJobs = ViewBag.FailedJobs;
+    List<BEArcus.WebApp.Models.JobHistory> missedJobs = ViewBag.MissedJobs;
+    List<BEArcus.WebApp.Models.JobHistory> succeededJobs = ViewBag.SucceededJobs;
+    List<BEArcus.WebApp.Models.JobHistory> succeededWithExceptionsJobs = ViewBag.SucceededWithExceptions;
+    var jobs = ViewBag.Jobs;
+    IEnumerable<string> CName = (new[] { "All" });
+    CName = CName.Concat(Model.Select(o => o.CustomerName).Distinct());
+    var i = 1;
+}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div class="preLoad">
+    <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:120px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div id="msg" style="font-size:larger;display:none" data-position="fixed">
+    <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:5px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div>
+    <div class="ui-grid-a" data-position="fixed">
+
+        <div class="ui-block-a">
+            <select id="SelectedCustomerId" name="SelectedCustomerId" data-mini="true">
+                <option selected disabled hidden>@ViewBag.Group</option>
+                @foreach (string customer in CName)
+                {
+                    <option value=@customer>@customer</option>
+                }
+            </select>
+        </div>
+
+        <div class="ui-block-b">
+            <select name="TimeFilter" id="TimeFilter" data-mini="true">
+                <option selected disabled hidden>@ViewBag.TimeFilter</option>
+                <option value="All">All</option>
+                <option value="-24">24 hrs</option>
+                <option value="-48">48 hrs</option>
+                <option value="-72">72 hrs</option>
+                <option value="-168">1 Week</option>
+                <option value="-730">1 Month</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div id="customerTable">
+        @foreach (var customer in customers)
+        {
+            <div data-role="collapsible" data-collapsed="false" class="panel panel-default">
+                <h4><span class="glyphicon glyphicon-user" style="margin-right:25px; "></span>@customer</h4>
+                <div class="panel-body">
+                    <div id=@i name="piechart"></div>
+                    <div class="table-responsive">
+                        <table id="table@(i)">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayName("Backup Exec Server")
+                                    </th>
+                                    <th>
+                                        @Html.DisplayName("Backup Exec Version")
+                                    </th>
+                                    <th>
+
+                                    </th>
+                                    <th style="display:none">
+                                        @Html.DisplayName("Last Update")
+                                    </th>
+                                    <th style="display:none">
+                                        @Html.DisplayName("Critical Alerts")
+                                    </th>
+                                    <th style="display:none">
+                                        @Html.DisplayName("Failed Jobs")
+                                    </th>
+                                    <th style="display:none">
+                                        @Html.DisplayName("Missed Jobs")
+                                    </th>
+                                    <th style="display:none">
+                                        @Html.DisplayName("Successful Jobs")
+                                    </th>
+                                    <th style="display:none">
+                                        @Html.DisplayName("Jobs Completed with Exceptions")
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            @{var mediaServer = Model.Where(o => o.CustomerName.Equals(customer));}
+
+                            @foreach (var media in mediaServer)
+                            {
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label>@media.Name</label>
+                                        </td>
+                                        <td>
+                                            <label>@media.Version.Substring(0, @media.Version.IndexOf(" "))</label>
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("...", "AlertTab", "MediaServer", new { mediaServer = media.Name }, null)
+                                        </td>
+                                        <td style="display:none">
+                                            <label>@media.LastUpdate</label>
+                                        </td>
+                                        <td style="display:none">
+                                            <a href='@Url.Action("FilterPanel", "MediaServer", new { id = customer, mediaServer = media.Name, befilter = "CriticalAlert" })'>@Html.Label(alerts.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())</a>
+                                        </td>
+                                        <td style="display:none">
+                                            <a href='@Url.Action("FilterPanel", "MediaServer", new { id = customer, mediaServer = media.Name, befilter = "FailedJob" })'>@Html.Label(failedJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())</a>
+                                        </td>
+                                        <td style="display:none">
+                                            <a href='@Url.Action("FilterPanel", "MediaServer", new { id = customer, mediaServer = media.Name, befilter = "MissedJob" })'>@Html.Label(missedJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())</a>
+                                        </td>
+                                        <td style="display:none">
+                                            <a href='@Url.Action("FilterPanel", "MediaServer", new { id = customer, mediaServer = media.Name, befilter = "SuccessfulJob" })'>@Html.Label(succeededJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())</a>
+                                        </td>
+                                        <td style="display:none">
+                                            <a href='@Url.Action("FilterPanel", "MediaServer", new { id = customer, mediaServer = media.Name, befilter = "CompletedWithExceptionJob" })'>@Html.Label(succeededWithExceptionsJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+            i++;
+        }
+    </div>
+
+</div>
+
+<script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+            for(j=1;j<=@i-1;j++){
+                var Failed=0;
+                var Missed=0;
+                var Succeeded=0;
+                var Exception=0;
+                var rows=document.getElementById("table"+j).rows.length;
+
+                for(k=1;k<=rows-1;k++){
+                    Failed=Failed+parseInt(document.getElementById("table"+j).rows[k].cells[5].textContent);
+                    Missed=Missed+parseInt(document.getElementById("table"+j).rows[k].cells[6].textContent);
+                    Succeeded=Succeeded+parseInt(document.getElementById("table"+j).rows[k].cells[7].textContent);
+                    Exception = Exception + parseInt(document.getElementById("table" + j).rows[k].cells[8].textContent);
+                }
+
+                var data = google.visualization.arrayToDataTable([
+                  ['Task', 'Hours per Day'],
+                  ['Failed', Failed],
+                  ['Missed',Missed],
+                  ['Succeeded',Succeeded],
+                  ['Succeeded with Exception',Exception]
+                ]);
+
+                var options = {
+                    title: 'Job Status for all Backup Exec Media Servers',
+                    is3D: true,
+                    pieSliceText: 'none',
+                    chartArea: { x: 'Job Status for all Backup Exec Media Servers',left: 40, top: 40, width: "70%", height: "70%" },
+                    height: 200,
+
+                    colors:['#FF0000','#800080','#008000','#FFFF00']
+
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById(j));
+                chart.draw(data, options);
+            }
+        }
+
+            $(document).ready(function () {
+                $("#SelectedCustomerId").change(function () {
+                    $("#msg").show();
+                    var selectedText1 = $("#SelectedCustomerId option:selected").text();
+                    var url = '@Url.Action("GetCustomer", "MediaServer")?customer=' + selectedText1;
+                    $("#group").load(window.location.href = url);
+
+                });
+            });
+
+            $(document).ready(function () {
+                $("#TimeFilter").change(function () {
+                    $("#msg").show();
+                    var selectedText1 = $("#TimeFilter option:selected").val();
+                    var url = '@Url.Action("FilteredImportantEvents", "MediaServer")?TimeFilter=' + selectedText1;
+                    $("#group").load(window.location.href = url);
+
+                });
+            });
+
+</script>
+

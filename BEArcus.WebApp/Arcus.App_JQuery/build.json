@@ -1,0 +1,11 @@
+{
+     "android": {
+      "release": {
+        "keystore": "c:\\my-release-key333.keystore",
+        "storePassword": "pravin123",
+        "alias": "pravin",
+        "password": "pravin123",
+        "keystoreType": ""
+      }
+     }
+ }

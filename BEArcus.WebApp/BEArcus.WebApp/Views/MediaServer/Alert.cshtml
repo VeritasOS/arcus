@@ -3,17 +3,16 @@
  * This software is licensed as described in the file LICENSE which is part of this repository
  *****************************************************************************/
 -->
-
 @model IEnumerable<BEArcus.WebApp.Models.Alert>
 @{
     Layout = null;
 }
 @{
     string mediaServer = ViewBag.Mediaserver;
-    IEnumerable<string> Category = Model.Select(o => o.Category).Distinct();
-    Category = Category.Concat(new[] { "All" });
-    IEnumerable<string> Name = Model.Select(o => o.Name).Distinct();
-    Name = Name.Concat(new[] { "All" });
+    IEnumerable<string> Category = new[] { "All" };
+    Category = Category.Concat(Model.Select(o => o.Category).Distinct());
+    IEnumerable<string> Name = new[] { "All" };
+    Name = Name.Concat(Model.Select(o => o.Name).Distinct());
     IEnumerable<string> Message = Model.Select(o => o.Message).Distinct();
     Message = Message.Concat(new[] { "All" });
     IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();

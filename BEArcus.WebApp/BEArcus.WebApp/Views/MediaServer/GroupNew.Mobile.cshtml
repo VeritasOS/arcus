@@ -1,0 +1,71 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@{
+    ViewBag.Title = "Group Page";
+}
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+}
+
+@Scripts.Render("~/bundles/jqueryval")
+
+@{
+    var mediaservers = Model.Select(o => o.Name).Distinct();
+}
+
+<script>
+    $(function () {
+        document.getElementById("customer").value = "New Group";
+    });
+</script>
+
+<div id="msg" style="font-size:larger;display:none">
+    <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:5px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div class="preLoad">
+    <img id="loading-image" style="width:10%; display: block; margin-left:auto; margin-top:120px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div data-position="fixed">
+    <div class="ui-grid-b">
+        <div class="ui-block-a ">
+            <button type="button" data-role="none" style="color:#0B8EE5;font-size:16px;border:none;margin-bottom:15px; background:#FAFAFA" onclick="goToBack()"><span class="glyphicon glyphicon-arrow-left"></span><strong></strong></button>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("GroupNewFinal", "MediaServer", FormMethod.Get))
+{
+    <div class="panel panel-default ui-mini">
+        <div class="panel-body">
+            <label style="margin-right:20px;">Enter name for a New Group</label>
+            <input type="text" name="customer" class="customer" id="customer" />
+        </div>
+        <div class="panel-body">
+            <label style="margin-right:20px;">Select Servers to add in new Group</label>
+            @foreach (string media in mediaservers)
+            {
+                <label><input type="checkbox" name="mediaServer" value='@media' class="mediaServer">@media</label>
+            }
+        </div>
+        <div class="panel-footer">
+            <input type="submit" id="btnNew" data-transitiom="none" class="ui-btn ui-mini ui-shadow ui-corner-all" value="Create">
+        </div>
+    </div>
+}
+
+<script>
+    function goToBack() {
+        document.getElementById('msg').style.display = 'block';
+        var url = '@Url.Action("GroupPage", "MediaServer")';
+        $("#group").load(window.location.href = url);
+    }
+</script>

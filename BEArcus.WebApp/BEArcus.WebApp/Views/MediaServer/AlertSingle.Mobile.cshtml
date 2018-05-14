@@ -1,0 +1,131 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.Alert>
+
+@{
+    ViewBag.Title = "SingleAlert";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutMonitor.Mobile.cshtml";
+}
+
+@{
+    var a = ViewBag.Alert;
+    string id = ViewBag.Id;
+    IEnumerable<string> Category = Model.Select(o => o.Category).Distinct();
+    Category = Category.Concat(new[] { "All" });
+    IEnumerable<string> Name = Model.Select(o => o.Name).Distinct();
+    Name = Name.Concat(new[] { "All" });
+    IEnumerable<string> Message = Model.Select(o => o.Message).Distinct();
+    Message = Message.Concat(new[] { "All" });
+    IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
+    BE_id = BE_id.Concat(new[] { "All" });
+    IEnumerable<string> Date = Model.Select(o => o.Date.ToString("s") + "Z").Distinct();
+    Date = Date.Concat(new[] { "All" });
+    IEnumerable<string> BackupExec = Model.Select(o => o.BackupExecServerName).Distinct();
+    BackupExec = BackupExec.Concat(new[] { "All" });
+}
+
+<div class="preLoad">
+    <img id="loading-image" style="width:10%; display: block; margin-left:auto; margin-top:120px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div data-role="content">
+    <div data-position="fixed" style="margin-bottom:15px;">
+        <a href="javascript:void(0);" onclick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span></a>
+    </div>
+
+    <div class="table-responsive " id="alrt">
+        <div style="background-color:#414142;"><h4 style="color:white;"> &nbsp;&nbsp;&nbsp;Alert</h4></div>
+
+        @foreach (var item in Model)
+        {
+            if (id.Equals(item.Id))
+            {
+                <table class="table-responsive ui-mini" style="width:90%">
+                    @{var style = (item.Severity.Equals("Error")) ? "color:red" : "";
+                    }
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color:#E6EAEE">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </th>
+                        </tr>
+                        <tr style="@style">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                        </tr>
+                        <tr style="background-color:#E6EAEE">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Date)
+                            </th>
+                        </tr>
+                        <tr style="@style">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                        </tr>
+                        <tr style="background-color:#E6EAEE">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Severity)
+                            </th>
+                        </tr>
+                        <tr style="@style">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Severity)
+                            </td>
+                        </tr>
+                        <tr style="background-color:#E6EAEE">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Category)
+                            </th>
+                        </tr>
+                        <tr style="@style">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Category)
+                            </td>
+                        </tr>
+                        <tr style="background-color:#E6EAEE">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Message)
+                            </th>
+                        </tr>
+                        <tr style="@style">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Message)
+                            </td>
+                        </tr>
+                        <tr style="background-color:#E6EAEE">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Source)
+                            </th>
+                        </tr>
+                        <tr style="@style">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Source)
+                            </td>
+                        </tr>
+                        <tr style="background-color:#E6EAEE">
+                            <th>
+                                @Html.DisplayNameFor(model => model.Umi)
+                            </th>
+                        </tr>
+                        <tr style="@style">
+                            <td>
+                                <a href="https://www.veritas.com/support/en_US/search-results.html?keyword=@item.Umi" target="_self">@Html.DisplayFor(modelItem => item.Umi)</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,72 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@{
+    ViewBag.Title = "Group Page";
+}
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+    var group = ViewBag.Group;
+}
+
+<script>
+    $(function () {
+        document.getElementById("customer").value = '@ViewBag.Group';
+    });
+</script>
+
+<div class="preLoad">
+    <img id="loading-image" style="width:10%; display: block; margin-left:auto; margin-top:120px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div id="msg" style="font-size:larger;display:none">
+    <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:5px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div data-position="fixed">
+    <div class="ui-grid-b">
+        <div class="ui-block-a ">
+            <button type="button" data-role="none" style="color:#0B8EE5;font-size:16px;border:none;margin-bottom:15px; background:#FAFAFA" onclick="goToBack() "><span class="glyphicon glyphicon-arrow-left"></span><strong></strong></button>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default ui-alt-icon ui-mini">
+
+    <div class="panel-body">
+        <label style="margin-right:20px;">Enter new name for a Group</label>
+        <input type="text" name="customer" id="customer" />
+    </div>
+
+    <div class="panel-footer">
+        <input type="button" id="btnRename" class="ui-btn ui-mini ui-shadow ui-corner-all" value="Rename">
+    </div>
+
+</div>
+
+<script>
+
+    $(function () {
+        $('#btnRename').click(function () {
+                $("#msg").show();
+                var customername = '@ViewBag.Group';
+                var newname = document.getElementById('customer').value;
+                $.post("/MediaServer/GroupRenameFinal", { customer: customername, name: newname }, function () {
+                window.location.href = '@Url.Action("GroupPage", "MediaServer")'
+            });
+        });
+    });
+
+     function goToBack() {
+          document.getElementById('msg').style.display = 'block';
+          var url = '@Url.Action("GroupPage", "MediaServer")' ;
+          $("#group").load(window.location.href = url);
+     }
+
+</script>

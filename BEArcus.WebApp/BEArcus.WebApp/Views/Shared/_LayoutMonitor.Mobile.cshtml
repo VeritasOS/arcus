@@ -1,0 +1,100 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@Html.Partial("_ViewSwitcher")
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>@ViewBag.Title  Backup Exec</title>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery.mobile.theme-1.4.5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.4.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.mobile-1.4.5.js"></script>
+
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Mobilecss")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .preLoad {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: center no-repeat #fff;
+        }
+
+        .afterLoad {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div data-role="page" data-theme="a">
+
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <div data-role="navbar" data-theme="b">
+                <ul>
+                    <li style="border-bottom:groove"><center><p style="margin-top:5px"><h5><strong>Arcus</strong></h5></p></center></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="content" class="ui-content">
+            @RenderBody()
+        </div>
+
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+    </div>
+
+    <script>
+        $('body').bind('hideOpenMenus', function () {
+            $("ul:jqmData(role='menu')").find('li > ul').hide();
+        });
+
+        var menuHandler = function (e) {
+            $('body').trigger('hideOpenMenus');
+            $(this).find('li > ul').show();
+            e.stopPropagation();
+        };
+
+        $("ul:jqmData(role='menu') li > ul li").click(function (e) {
+            $('body').trigger('hideOpenMenus');
+            e.stopPropagation();
+        });
+
+        $('body').delegate("ul:jqmData(role='menu')", 'click', menuHandler);
+
+        $('body').click(function (e) {
+            $('body').trigger('hideOpenMenus');
+        });
+
+        $(window).load(function () {
+            // Animate loading element
+            $(".preLoad").fadeOut("afterLoad");
+        });
+
+    </script>
+
+</body>
+
+</html>

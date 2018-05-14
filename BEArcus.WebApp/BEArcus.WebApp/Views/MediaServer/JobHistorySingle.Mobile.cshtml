@@ -1,0 +1,174 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.JobHistory>
+
+@{
+    ViewBag.Title = "JobHistorySingle";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutMonitor.Mobile.cshtml";
+}
+
+@{
+    string mediaServer = ViewBag.Mediaserver;
+    string id = ViewBag.Id;
+    IEnumerable<string> Name = Model.Select(o => o.Name).Distinct();
+    Name = Name.Concat(new[] { "All" });
+    IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
+    BE_id = BE_id.Concat(new[] { "All" });
+    IEnumerable<string> JobType = Model.Select(o => o.JobType).Distinct();
+    JobType = JobType.Concat(new[] { "All" });
+    IEnumerable<string> JobStatus = Model.Select(o => o.JobStatus).Distinct();
+    JobStatus = JobStatus.Concat(new[] { "All" });
+    IEnumerable<string> StartTime = Model.Select(o => o.StartTime.ToString("s") + "Z").Distinct();
+    StartTime = StartTime.Concat(new[] { "All" });
+    IEnumerable<string> EndTime = Model.Select(o => o.EndTime.ToString("s") + "Z").Distinct();
+    EndTime = EndTime.Concat(new[] { "All" });
+}
+
+<div class="preLoad">
+    <img id="loading-image" style="width:10%; display: block; margin-left:auto; margin-top:120px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+@using (Html.BeginForm("JobHistory", "MediaServer", new { media = ViewBag.Mediaserver }, FormMethod.Post))
+{
+    <div data-position="fixed" style="margin-bottom:15px;">
+        <a href="javascript:void(0);" onclick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span></a>
+    </div>
+
+    <div class="table-responsive" id="jobHistory@(mediaServer)" style="overflow-x:hidden; margin-right:10px; margin-left:10px">
+        <div style="background-color:#414142;"><h4 style="color:white;"> &nbsp;&nbsp;&nbsp;Job History</h4></div>
+        <table class="ui-mini" style="width:90%">
+
+            @foreach (var item in Model)
+            {
+                if (id.Equals(item.Id))
+                {
+                    var style = (item.JobStatus.Equals("Error")) ? "color:red" : "";
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            <strong style="font-size:x-small">
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </strong>
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.JobStatus)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.JobStatus)
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.JobType)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.JobType)
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.StartTime)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartTime)
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.StartTime)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndTime)
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.StorageName)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StorageName)
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.TotalDataSizeBytes)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TotalDataSizeBytes)
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.JobRateMBPerMinute)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.JobRateMBPerMinute)
+                        </td>
+                    </tr>
+
+                    <tr style="background-color:#E6EAEE">
+                        <th>
+                            @Html.DisplayNameFor(model => model.ErrorCode)
+                        </th>
+                    </tr>
+                    <tr style="@style">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ErrorCode)
+                        </td>
+                    </tr>
+
+                }
+            }
+        </table>
+    </div>
+
+    <script>
+
+        function loadStartTime(elem) {
+            var opt=document.activeElement.getAttribute('class')
+            $("#jobHistory"+opt).load("/MediaServer/GetSortedStartDate", { sortOrder:@Html.Raw(Json.Encode(ViewBag.DateSortParm)), media:opt});
+        }
+
+        function loadEndTime(elem) {
+            var opt=document.activeElement.getAttribute('class')
+            $("#jobHistory"+opt).load("/MediaServer/GetSortedEndDate", { sortOrder:@Html.Raw(Json.Encode(ViewBag.DateSortParm)), media:opt});
+        }
+
+    </script>
+}

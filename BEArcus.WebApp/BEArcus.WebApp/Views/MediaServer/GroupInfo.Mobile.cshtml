@@ -1,0 +1,88 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@{
+    ViewBag.Title = "Group Page";
+}
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+}
+
+@Scripts.Render("~/bundles/jqueryval")
+
+@{
+    string customerdata = ViewBag.CustomerData;
+    var customers = Model.Select(o => o.CustomerName).Distinct();
+    var medialist = Model.Where(o => o.CustomerName.Equals(customerdata));
+    var i = 1;
+}
+
+<div id="msg" style="font-size:larger;display:none">
+    <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:5px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div data-position="fixed">
+    <div class="ui-grid-b">
+        <div class="ui-block-a ">
+            <button type="button" data-role="none" style="color:#0B8EE5;font-size:16px;border:none;margin-bottom:15px; background:#FAFAFA" onclick=" goToBack()"><span class="glyphicon glyphicon-arrow-left"></span><strong></strong></button>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("GroupRemoveServers", "MediaServer", FormMethod.Get))
+{
+    <div class="panel panel-default ui-mini">
+
+        <div class="panel-footer">
+            <div class="ui-grid-a">
+                <div class="ui-block-a"><input type="submit" id="btnRemove" class="ui-btn ui-mini ui-shadow ui-corner-all" value="Remove Servers" /></div>
+                <div class="ui-block-b"><input type="button" id="btnAdd" class="ui-btn ui-mini ui-shadow ui-corner-all" value="Add Severs" onclick="goToAddServers()" /></div>
+            </div>
+            <div>
+                <h6>Select Servers to Remove from Group</h6>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="panel-heading"><span class="glyphicon glyphicon-user"></span> @customerdata</div>
+            <input type="text" style="display:none" name="customername" class="customername" id="customername" value='@customerdata' />
+            <input type="text" style="display:none" name="customer" class="customer" id="customer" value="All BE Servers" />
+
+            @foreach (var media in medialist)
+            {
+                <div>
+                    <label style="margin-right:20px;"><input type="checkbox" name="mediaServer" value='@media.Name' class="mediaServer"> @media.Name</label>
+                </div>
+                i++;
+            }
+        </div>
+
+    </div>
+}
+
+<script>
+     $(function () {
+        $('#btnRemove').click(function () {
+            alert("Selected server's will removed from this group & added to 'All BE Servers' Group");
+        });
+     });
+
+     function goToAddServers() {
+         document.getElementById('msg').style.display = 'block';
+         var url = '@Url.Action("GroupAddServers", "MediaServer", new { customer = customerdata })' ;
+         $("#group").load(window.location.href = url);
+     }
+
+     function goToBack() {
+          document.getElementById('msg').style.display = 'block';
+          var url = '@Url.Action("GroupPage", "MediaServer")' ;
+          $("#group").load(window.location.href = url);
+     }
+
+</script>

@@ -10,7 +10,7 @@ Backup Exec Monitoring
 - Open Windows PowerShell prompt
 - Set the execution policy to unrestricted only for the current session using command: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted –Force
 - Load the PowerShell script DeployWebApp.ps1
-- Run the PowerShell command: DeployWebApp –subscriptionId &quot;&lt;subscription Id&gt;&quot; -resourceGroupName &quot;&lt;Resource Group&gt;&quot; –siteName &quot;&lt;unique site name&gt;&quot; –hostingPlanName -&lt;hosting plane name&gt;
+- Run the PowerShell command: DeployWebApp –subscriptionId &quot;&lt;subscription Id&gt;&quot; -resourceGroupName &quot;&lt;Resource Group&gt;&quot; –siteName &quot;&lt;unique site name&gt;&quot; –hostingPlanName -&lt;hosting plane name&gt; –existingSite -&lt;Yes/No&gt;
 
 ## 1.2	Create CosmosDB Database account
 

@@ -133,6 +133,33 @@ namespace BEArcus.WebApp.Controllers
 
 
         /// <summary>
+        /// Gets the Media Server data form the given Group name, Endpoint Url and Authorization Key.
+        /// </summary>
+        /// <param name="endpointUrl"></param>
+        /// <param name="authorizationKey"></param>
+        /// <param name="customername"></param>
+        /// <returns></returns>
+        public static IEnumerable<MediaServer> GetMediaServersByCustomerName(string customername)
+        {
+            Trace.WriteLine("Entering GetMediaServersByCustomerName");
+
+            client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey);
+            Init(beDatabaseId, mediaServerCollectionId);
+            var collectionLink = UriFactory.CreateDocumentCollectionUri(beDatabaseId, mediaServerCollectionId);
+
+            Trace.TraceInformation(DateTime.Now.ToLongTimeString() + "Querying for Media Servers");
+            return client.CreateDocumentQuery<MediaServer>(collectionLink, new SqlQuerySpec()
+            {
+                QueryText = "SELECT * FROM MediaServerCollection a WHERE a.CustomerName = @Customer",
+                Parameters = new SqlParameterCollection()
+                         {
+                        new SqlParameter("@Customer", customername)
+                         }
+            }).AsEnumerable();
+        }
+
+
+        /// <summary>
         /// Gets the Alerts data for the provided Media Sever form the given Endpoint Url and Authorization Key. 
         /// </summary>
         /// <param name="endpointUrl"></param>
@@ -960,6 +987,7 @@ namespace BEArcus.WebApp.Controllers
                 return true;
             }
         }
+
 
         /// <summary>
         /// Checks if the database is accessible.

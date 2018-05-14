@@ -3,24 +3,22 @@
  * This software is licensed as described in the file LICENSE which is part of this repository
  *****************************************************************************/
 -->
-
 @model IEnumerable<BEArcus.WebApp.Models.Job>
-
 @{
     Layout = null;
 }
 @{
     string mediaServer = ViewBag.Mediaserver;
-    IEnumerable<string> Name = Model.Select(o => o.Name).Distinct();
-    Name = Name.Concat(new[] { "All" });
+    IEnumerable<string> Name = new[] { "All" };
+    Name = Name.Concat(Model.Select(o => o.Name).Distinct());
     IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
     BE_id = BE_id.Concat(new[] { "All" });
-    IEnumerable<string> TaskName = Model.Select(o => o.TaskName).Distinct();
-    TaskName = TaskName.Concat(new[] { "All" });
-    IEnumerable<string> JobType = Model.Select(o => o.JobType).Distinct();
-    JobType = JobType.Concat(new[] { "All" });
-    IEnumerable<string> Status = Model.Select(o => o.Status).Distinct();
-    Status = Status.Concat(new[] { "All" });
+    IEnumerable<string> TaskName = new[] { "All" };
+    TaskName = TaskName.Concat(Model.Select(o => o.TaskName).Distinct());
+    IEnumerable<string> JobType = new[] { "All" };
+    JobType = JobType.Concat(Model.Select(o => o.JobType).Distinct());
+    IEnumerable<string> Status = new[] { "All" };
+    Status = Status.Concat(Model.Select(o => o.Status).Distinct());
     IEnumerable<string> SelectionSummary = Model.Select(o => o.SelectionSummary).Distinct();
     SelectionSummary = SelectionSummary.Concat(new[] { "All" });
 }
@@ -55,7 +53,6 @@
                 </th>
                 <th></th>
             </tr>
-
             @foreach (var item in Model)
             {
                 <tr>
@@ -77,10 +74,8 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Priority)
                     </td>
-
                 </tr>
             }
-
         </table>
     </div>
 

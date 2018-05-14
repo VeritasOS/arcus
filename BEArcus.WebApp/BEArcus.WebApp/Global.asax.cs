@@ -20,6 +20,8 @@ namespace BEArcus.WebApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier;
+            BundleMobileConfig.RegisterBundles(BundleTable.Bundles);
+           
         }
     }
 }

@@ -1,0 +1,123 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.Job>
+
+@{
+    ViewBag.Title = "SingleJob";
+}
+
+@{
+    Layout = "~/Views/Shared/_LayoutMonitor.Mobile.cshtml";
+}
+
+@{
+    string mediaServer = ViewBag.Mediaserver;
+    string id = ViewBag.Id;
+    IEnumerable<string> Name = Model.Select(o => o.Name).Distinct();
+    Name = Name.Concat(new[] { "All" });
+    IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
+    BE_id = BE_id.Concat(new[] { "All" });
+    IEnumerable<string> TaskName = Model.Select(o => o.TaskName).Distinct();
+    TaskName = TaskName.Concat(new[] { "All" });
+    IEnumerable<string> JobType = Model.Select(o => o.JobType).Distinct();
+    JobType = JobType.Concat(new[] { "All" });
+    IEnumerable<string> Status = Model.Select(o => o.Status).Distinct();
+    Status = Status.Concat(new[] { "All" });
+    IEnumerable<string> SelectionSummary = Model.Select(o => o.SelectionSummary).Distinct();
+    SelectionSummary = SelectionSummary.Concat(new[] { "All" });
+}
+
+<div class="preLoad">
+    <img id="loading-image" style="width:10%; display: block; margin-left:auto; margin-top:120px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div data-position="fixed" style="margin-bottom:15px;">
+    <a href="javascript:void(0);" onclick="history.go(-1);"><span class="glyphicon glyphicon-arrow-left"></span></a>
+</div>
+
+<div class="table-responsive" style="overflow-x:hidden; margin-right:10px; margin-left:10px" id="job@(mediaServer)">
+    <div style="background-color:#414142;"><h4 style="color:white;"> &nbsp;&nbsp;&nbsp;Job</h4></div>
+    <table class="ui-mini" style="width:90%">
+        @foreach (var item in Model)
+        {
+            if (id.Equals(item.Id))
+            {
+
+                <tr style="background-color:#E6EAEE">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <strong style="font-size:x-small">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </strong>
+
+                    </td>
+                </tr>
+                <tr style="background-color:#E6EAEE">
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.TaskName)
+
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TaskName)
+                    </td>
+                </tr>
+                <tr style="background-color:#E6EAEE">
+                    <th>
+                        @Html.DisplayNameFor(model => model.JobType)
+
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JobType)
+                    </td>
+                </tr>
+                <tr style="background-color:#E6EAEE">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                </tr>
+                <tr style="background-color:#E6EAEE">
+                    <th>
+                        @Html.DisplayNameFor(model => model.SelectionSummary)
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SelectionSummary)
+                    </td>
+                </tr>
+                <tr style="background-color:#E6EAEE">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Priority)
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Priority)
+                    </td>
+                </tr>
+
+            }
+        }
+    </table>
+</div>
+

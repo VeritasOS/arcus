@@ -1,0 +1,135 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.Alert>
+
+@{
+    Layout = null;
+}
+
+@{
+    string mediaServer = ViewBag.Mediaserver;
+    string mediaServer1 = ViewBag.Mediaserver;
+    var a = ViewBag.Alert;
+    IEnumerable<string> Category = new[] { "All" };
+    Category = Category.Concat(Model.Select(o => o.Category).Distinct());
+    IEnumerable<string> Name = new[] { "All" };
+    Name = Name.Concat(Model.Select(o => o.Name).Distinct());
+    IEnumerable<string> Message = Model.Select(o => o.Message).Distinct();
+    Message = Message.Concat(new[] { "All" });
+    IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
+    BE_id = BE_id.Concat(new[] { "All" });
+    IEnumerable<string> Date = Model.Select(o => o.Date.ToString("s") + "Z").Distinct();
+    Date = Date.Concat(new[] { "All" });
+    IEnumerable<string> BackupExec = Model.Select(o => o.BackupExecServerName).Distinct();
+    BackupExec = BackupExec.Concat(new[] { "All" });
+}
+
+@using (Html.BeginForm("Alert", "MediaServer", new { media = ViewBag.Mediaserver }, FormMethod.Post))
+{
+
+    <div class="table-responsive" id="alert@(mediaServer)">
+        <div class="ui-grid-b" data-position="fixed">
+
+            <div class="ui-block-a">
+                <select name="Name" id="Name" onchange="loadAlertName(this);" class=@mediaServer style="font-size:smaller;font-weight: bold;width:95%;height:30px;color:#17202A;background-color:#F0F3F4;-webkit-border-radius: 5px;" data-mini="true">
+                    @foreach (string name in Name)
+                    {
+                        <option value='@name'>@name</option>
+                    }
+                    <option selected disabled hidden>@ViewBag.Name</option>
+                </select>
+            </div>
+
+            <div class="ui-block-b">
+                <select name="Severity" id="Severity" onchange="loadSeverity(this);" class=@mediaServer style="font-size:smaller;font-weight: bold;width:95%;height:30px;color:#17202A;background-color:#F0F3F4;-webkit-border-radius: 5px;" data-mini="true">
+                    <option value="All">All</option>
+                    <option value="Error">Error</option>
+                    <option value="Warning">Warning</option>
+                    <option value="Attention Required">Attention Required</option>
+                    <option value="Information">Information</option>
+                    <option selected disabled hidden>@ViewBag.Severity</option>
+                </select>
+            </div>
+
+            <div class="ui-block-c">
+                <select name="Category" id="Category" onchange="loadCategory(this);" class=@mediaServer style="font-size:smaller;font-weight: bold;width:95%;height:30px;color:#17202A;background-color:#F0F3F4;-webkit-border-radius: 5px;" data-mini="true">
+                    @foreach (string category in Category)
+                    {
+                        <option value='@category'>@category</option>
+                    }
+                    <option selected disabled hidden>@ViewBag.Category</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="msg" style="font-size:larger;display:none" data-position="fixed">
+            <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:5px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+        </div>
+
+        <div style="background-color:#414142;"><h4 style="color:white;"> &nbsp;&nbsp;&nbsp;Alert</h4></div>
+        <table class="ui-mini" style="width:95%">
+            <thead>
+                <tr style="background-color:#E6EAEE">
+                    <th style="width:85%">
+                        @Html.DisplayNameFor(model => model.Name)
+
+                    </th>
+                    <th style="width:10%">
+                    </th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                var style = (item.Severity.Equals("Error")) ? "color:red" : "";
+                <tbody>
+                    <tr style="@style; border: 0.5px black; border-top-style:groove; border-right-style:groove;border-bottom-style:none;border-left-style:groove;">
+                        <td style=" max-width:315px; height:30px; text-overflow: ellipsis;width:85%">
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td style="width:10%">
+                            @{ string id = item.Id; }
+                            <input type="button" value="..." style="color:white; background:#5DADE2" name="button" onclick="goAlertSingle('@id','@mediaServer1')" />
+                        </td>
+                    </tr>
+                    <tr style="@style;  border: 0.5px black; border-top-style:none; border-right-style:groove;border-bottom-style:none;border-left-style:groove; ">
+                        <td style="color:white;width:85%">
+                            |
+                        </td>
+                        <td style="width:10%"></td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+
+    <script>
+        function loadAlertName(elem) {
+            document.getElementById('msg').style.display = 'block';
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetAlertName", { Name:elem.value, media:opt,alerts:@Html.Raw(Json.Encode(ViewBag.Alerts))});
+        }
+        function loadDate(elem) {
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetSortedDate", { sortOrder:@Html.Raw(Json.Encode(ViewBag.DateSortParm)) , media:opt });
+        }
+        function loadSeverity(elem) {
+            document.getElementById('msg').style.display = 'block';
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetSeverity", { Severity:elem.value, media:opt,alerts: @Html.Raw(Json.Encode(ViewBag.Alerts))});
+        }
+        function loadCategory(elem) {
+            document.getElementById('msg').style.display = 'block';
+            var opt=document.activeElement.getAttribute('class')
+            $("#alert"+opt).load("/MediaServer/GetCategory", { Category:elem.value, media:opt,alerts: @Html.Raw(Json.Encode(ViewBag.Alerts)) });
+        }
+        function goAlertSingle(id, mediaServer1) {
+            document.getElementById('msg').style.display = 'block';
+            var url = '@Url.Action("AlertSingle", "MediaServer")/'+id+'?mediaServer=' + mediaServer1;
+            $("#group").load(window.location.href = url);
+        }
+    </script>
+}

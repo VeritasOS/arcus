@@ -1,0 +1,23 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    Layout = null;
+}
+
+@{
+    var customers = Model.Select(o => o.CustomerName).Distinct();
+}
+
+@foreach (var customer in customers)
+{
+    <li style="font-size:18px;"><a href="/MediaServer/FilterPanel"><font color="#C7C7C7">@customer</font></a></li>
+}
+
+<div class="divFilterPanel" style="left: 400px;">
+    @RenderBody()
+</div>

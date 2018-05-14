@@ -1,0 +1,123 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@{
+    ViewBag.Title = "Group Page";
+}
+
+@model IEnumerable<BEArcus.WebApp.Models.MediaServer>
+
+@{
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+}
+
+@Scripts.Render("~/bundles/jqueryval")
+
+@{
+    var customers = Model.Select(o => o.CustomerName).Distinct();
+    var a = ViewBag.Mediaserver;
+    var i = 1;
+}
+
+<div id="msg" style="font-size:larger;display:none">
+    <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:5px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+</div>
+
+<div data-position="fixed">
+    <div class="ui-grid-b">
+        <div class="ui-block-a ">
+            <button type="button" data-role="none" style="color:#0B8EE5;font-size:16px;border:none;margin-bottom:15px; background:#FAFAFA" onclick="goToBack()"><span class="glyphicon glyphicon-arrow-left"></span><strong></strong></button>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default" id="group">
+
+    <div class="panel-footer">
+        <div class="ui-grid-b">
+            <div class="ui-block-a"> <input type="button" id="btnRemove" data-transition="fade" class="ui-btn ui-mini ui-shadow ui-corner-all" value="Remove" /></div>
+            <div class="ui-block-b"> <input type="button" id="btnRename" class="ui-btn ui-mini ui-shadow ui-corner-all" value="Rename" /></div>
+            <div class="ui-block-c"> <input type="button" id="btnNew" class="ui-btn ui-mini ui-shadow ui-corner-all" value="New Group" /></div>
+        </div>
+        <div>
+            <h6>Select Group to Remove or Rename</h6>
+        </div>
+    </div>
+
+    @foreach (var customer in customers)
+    {
+        if (customer.Equals("All BE Servers"))
+        {
+            <div class="panel-body">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <label style="margin-right:20px;max-width:10px; color:white;"> ABC</label>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <a onclick="goGroupInfo('@customer')" id=@i>  @customer</a>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="panel-body">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <label style="margin-right:20px;max-width:10px"><input type="radio" name="mediaServer1" value='@customer' class="mediaServer" checked> </label>
+                    </div>
+                    <div style="margin-top:10px">
+                        <a onclick="goGroupInfo('@customer')" id=@i>  @customer</a>
+                    </div>
+                </div>
+            </div>
+        }
+        i++;
+    }
+</div>
+
+<script>
+
+    $(function () {
+        $('#btnRemove').click(function () {
+            var customername = $('[name="mediaServer1"]:radio:checked').val();
+            alert("This group wiil be removed & servers inside this group will be added to 'All BE Servers' Group");
+            $("#msg").show();
+            $.post("/MediaServer/RemoveGroup", {customer: customername }, function () {
+                window.location.href = '@Url.Action("GroupPage", "MediaServer")'
+            });
+        });
+    });
+
+    $(function () {
+        $('#btnRename').click(function () {
+            $("#msg").show();
+            var customername = $('[name="mediaServer1"]:radio:checked').val();
+            var url = '@Url.Action("GroupRename", "MediaServer")?customer=' + customername;
+            $("#group").load(window.location.href = url);
+        });
+    });
+
+    $(function () {
+        $('#btnNew').click(function () {
+            $("#msg").show();
+            var url = '@Url.Action("GroupNew", "MediaServer")';
+            $("#group").load(window.location.href = url);
+        });
+    });
+
+     function goToBack() {
+          document.getElementById('msg').style.display = 'block';
+          var url = '@Url.Action("HomePage", "MediaServer")' ;
+          $("#group").load(window.location.href = url);
+     }
+
+     function goGroupInfo(customer) {
+          document.getElementById('msg').style.display = 'block';
+          var url = '@Url.Action("GroupInfo", "MediaServer")?customer=' + customer;
+          $("#group").load(window.location.href = url);
+     }
+</script>

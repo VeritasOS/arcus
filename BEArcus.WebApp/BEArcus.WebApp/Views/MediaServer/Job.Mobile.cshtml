@@ -1,0 +1,149 @@
+﻿<!--******************************************************************************
+ * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * This software is licensed as described in the file LICENSE which is part of this repository
+ *****************************************************************************/
+-->
+
+@model IEnumerable<BEArcus.WebApp.Models.Job>
+
+@{
+    Layout = null;
+}
+
+@{
+    string mediaServer = ViewBag.Mediaserver;
+    string mediaServer1 = ViewBag.Mediaserver;
+    IEnumerable<string> Name = new[] { "All" };
+    Name = Name.Concat(Model.Select(o => o.Name).Distinct());
+    IEnumerable<string> BE_id = Model.Select(o => o.be_id).Distinct();
+    BE_id = BE_id.Concat(new[] { "All" });
+    IEnumerable<string> TaskName = new[] { "All" };
+    TaskName = TaskName.Concat(Model.Select(o => o.TaskName).Distinct());
+    IEnumerable<string> JobType = new[] { "All" };
+    JobType = JobType.Concat(Model.Select(o => o.JobType).Distinct());
+    IEnumerable<string> Status = new[] { "All" };
+    Status = Status.Concat(Model.Select(o => o.Status).Distinct());
+    IEnumerable<string> SelectionSummary = Model.Select(o => o.SelectionSummary).Distinct();
+    SelectionSummary = SelectionSummary.Concat(new[] { "All" });
+}
+
+@using (Html.BeginForm("Job", "MediaServer", new { media = ViewBag.Mediaserver }, FormMethod.Post))
+{
+
+    <div class="table-responsive" id="job@(mediaServer)">
+
+        <div class="ui-grid-c" data-position="fixed">
+
+            <div class="ui-block-a">
+                <select name="JobName" id="JobName" onchange="loadJobName(this);" class=@mediaServer style="font-size:smaller;font-weight: bold;width:95%;height:30px;color:#17202A;background-color:#F0F3F4;-webkit-border-radius: 5px;" data-mini="true">
+                    @foreach (string name in Name)
+                    {
+                        <option value='@name'>@name</option>
+                    }
+                    <option selected disabled hidden>@ViewBag.Name</option>
+                </select>
+            </div>
+
+            <div class="ui-block-b">
+                <select name="TaskName" id="TaskName" onchange="loadTaskName(this);" style="font-size:smaller;font-weight: bold;width:95%;height:30px;color:#17202A;background-color:#F0F3F4;-webkit-border-radius: 5px;" class=@mediaServer data-mini="true">
+                    @foreach (string taskname in TaskName)
+                    {
+                        <option value='@taskname'>@taskname</option>
+                    }
+                    <option selected disabled hidden>@ViewBag.TaskName</option>
+                </select>
+            </div>
+
+            <div class="ui-block-c">
+                <select name="JobType" id="JobType" onchange="loadJobType(this);" class=@mediaServer style="font-size:smaller;font-weight: bold;width:95%;height:30px;color:#17202A;background-color:#F0F3F4;-webkit-border-radius: 5px;" data-mini="true">
+                    @foreach (string jobType in JobType)
+                    {
+                        <option value='@jobType'>@jobType</option>
+                    }
+                    <option selected disabled hidden>@ViewBag.JobType</option>
+                </select>
+            </div>
+
+            <div class="ui-block-d">
+                <select name="Status" id="Status" onchange="loadStatus(this);" class=@mediaServer style="font-size:smaller;font-weight: bold;width:95%;height:30px;color:#17202A;background-color:#F0F3F4;-webkit-border-radius: 5px;" data-mini="true">
+                    @foreach (string status in Status)
+                    {
+                        <option value='@status'>@status</option>
+                    }
+                    <option selected disabled hidden>@ViewBag.Status</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div id="msg" style="font-size:larger;display:none">
+            <img id="loading-image" style="width:10%; display:block; margin-left:auto; margin-top:5px; margin-right:auto;" src="~/Images/loading.gif" alt="Loading..." />
+        </div>
+
+        <div style="background-color:#414142; "><h4 style="color:white; "> &nbsp;&nbsp;&nbsp;Job</h4></div>
+        <table class="ui-mini" style="width:95%">
+
+            <tr style="background-color:#E6EAEE">
+                <th style="width:85%">
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th style="width:10%">
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr style=" border: 0.5px black; border-top-style:groove; border-right-style:groove;border-bottom-style:none;border-left-style:groove;">
+                    <td style=" max-width:315px; height:30px; overflow-x:hidden; text-overflow: ellipsis;width:85% ">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td style="width:10%">
+                        @{ string id = item.Id; }
+                        <input type="button" value="..." style="color:white; background:#5DADE2" name="button" onclick="goJobSingle('@id','@mediaServer1')" />
+                    </td>
+                </tr>
+                <tr style=" border: 0.5px black; border-top-style:none; border-right-style:groove;border-bottom-style:none;border-left-style:groove;">
+                    <td style="color:white;width:85%">
+                        _
+                    </td>
+                    <td style="width:10%"></td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <script>
+
+        function loadJobName(elem) {
+            document.getElementById('msg').style.display = 'block';
+            var opt = document.activeElement.getAttribute('class')
+            $("#job" + opt).load("/MediaServer/GetJobName", { Name: elem.value, media: opt, jobs:@Html.Raw(Json.Encode(ViewBag.Jobs))});
+        }
+
+        function loadTaskName(elem) {
+            document.getElementById('msg').style.display = 'block';
+            var opt = document.activeElement.getAttribute('class')
+            $("#job" + opt).load("/MediaServer/GetTaskName", { TaskName: elem.value, media: opt,jobs: @Html.Raw(Json.Encode(ViewBag.Alerts)) });
+        }
+
+        function loadJobType(elem) {
+            document.getElementById('msg').style.display = 'block';
+            var opt = document.activeElement.getAttribute('class')
+            $("#job" + opt).load("/MediaServer/GetJobType", { JobType: elem.value, media: opt,jobs: @Html.Raw(Json.Encode(ViewBag.Alerts))});
+        }
+
+        function loadStatus(elem) {
+            document.getElementById('msg').style.display = 'block';
+            var opt = document.activeElement.getAttribute('class')
+            $("#job" + opt).load("/MediaServer/GetStatus", { Status: elem.value, media: opt,jobs: @Html.Raw(Json.Encode(ViewBag.Alerts)) });
+        }
+
+        function goJobSingle(id, mediaServer1) {
+            document.getElementById('msg').style.display = 'block';
+            var url = '@Url.Action("JobSingle", "MediaServer")/'+id+'?mediaServer=' + mediaServer1;
+            $("#group").load(window.location.href = url);
+        }
+
+    </script>
+
+}
