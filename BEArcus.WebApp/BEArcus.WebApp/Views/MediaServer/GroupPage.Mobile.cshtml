@@ -1,5 +1,5 @@
 ﻿<!--******************************************************************************
- * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * VERITAS:    Copyright (c) 2018 Veritas Technologies LLC.
  * This software is licensed as described in the file LICENSE which is part of this repository
  *****************************************************************************/
 -->
@@ -49,7 +49,7 @@
 
     @foreach (var customer in customers)
     {
-        if (customer.Equals("All BE Servers"))
+        if (customer.Equals("Default Group"))
         {
             <div class="panel-body">
                 <div class="ui-grid-b">
@@ -84,7 +84,7 @@
     $(function () {
         $('#btnRemove').click(function () {
             var customername = $('[name="mediaServer1"]:radio:checked').val();
-            alert("This group wiil be removed & servers inside this group will be added to 'All BE Servers' Group");
+            alert("This group wiil be removed & servers inside this group will be added to 'Default Group' ");
             $("#msg").show();
             $.post("/MediaServer/RemoveGroup", {customer: customername }, function () {
                 window.location.href = '@Url.Action("GroupPage", "MediaServer")'

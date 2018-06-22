@@ -1,5 +1,5 @@
 ﻿<!--******************************************************************************
- * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * VERITAS:    Copyright (c) 2018 Veritas Technologies LLC.
  * This software is licensed as described in the file LICENSE which is part of this repository
  *****************************************************************************/
 -->
@@ -41,6 +41,28 @@
                     <h6>
                         (Last Update: @lastUpdate)<input type="button" value="Details..." style="color:white; background:#808B96; margin-left:10px" onclick=" goToBigHome()" />
                     </h6>
+                    @try
+                    {
+                        string capacity = Model.Where(o => o.Name.Equals(mediaServer1)).FirstOrDefault().EstimatedUsedCapacity;
+                        if (capacity.Equals(null))
+                        {
+                            <h6>
+                                Estimated Used Capacity*: NA
+                            </h6>
+                        }
+                        else
+                        {
+                            <h6 data-toggle="tooltip" data-placement="top" title="Arcus is calculating approximate Estimated Capacity Usage and might not exactly match with BE.">
+                                Estimated Used Capacity*: @capacity Used
+                            </h6>
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        <h6>
+                            Estimated Used Capacity*: NA
+                        </h6>
+                    }
                 </div>
 
                 <div class="ui-grid-b">
@@ -77,5 +99,7 @@
             var url = '@Url.Action("MediaServerInfo", "MediaServer", new {  mediaServer = mediaServer1})' ;
             $("#group").load(window.location.href = url);
         }
-
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 </script>

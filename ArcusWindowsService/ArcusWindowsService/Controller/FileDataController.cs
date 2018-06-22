@@ -1,5 +1,5 @@
 ﻿/******************************************************************************
- * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * VERITAS:    Copyright (c) 2018 Veritas Technologies LLC.
  * This software is licensed as described in the file LICENSE which is part of this repository    
  *****************************************************************************/
 

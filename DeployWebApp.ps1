@@ -67,12 +67,11 @@ $Value = "Yes"
 
 # sign in
 Write-Host "Logging in...";
-Add-AzureRmAccount;
+Add-AzureAccount;
 
 # select subscription
 Write-Host "Selecting subscription '$subscriptionId'";
 Set-AzureRmContext -SubscriptionID $subscriptionId;
-   
 
 #Create or check for existing resource group
 $resourceGroup = Get-AzureRmResourceGroup -Name $resourceGroupName -ErrorAction SilentlyContinue
@@ -121,7 +120,7 @@ Write-Host "Starting deployment...";
 
     # Start the deployment
     Write-Host "Starting deployment...";
-   New-AzureRmResourceGroupDeployment -TemplateUri $templateUri -siteName $siteName -hostingPlanName $hostingPlanName -ResourceGroupName $resourceGroupName -Verbose
+    New-AzureRmResourceGroupDeployment -TemplateUri $templateUri -siteName $siteName -hostingPlanName $hostingPlanName -ResourceGroupName $resourceGroupName -Verbose
     }
 
 }

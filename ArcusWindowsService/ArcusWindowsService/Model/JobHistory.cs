@@ -1,5 +1,5 @@
 ﻿/******************************************************************************
- * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * VERITAS:    Copyright (c) 2018 Veritas Technologies LLC.
  * This software is licensed as described in the file LICENSE which is part of this repository    
  *****************************************************************************/
 
@@ -94,10 +94,11 @@ namespace BEArcus.Agent
                 if (JobRateMBPerMinute.Equals("-1"))
                 {
                     jobRateMBPerMinute = " ";
-                }              
+                }
             }
         }
 
+        public string JobLogFilePath { get; set; }
         private string errorCode;
         public string ErrorCode
         {
@@ -120,17 +121,17 @@ namespace BEArcus.Agent
                 string dataSize = bytes.ToString("0.00");
                 return dataSize + " Bytes";
             }
-            else if(bytes>=1024 && bytes < 1048576)
-            {                
-                return (bytes / 1024f).ToString("0.00")+ " KB";
-            }
-            else if (bytes >= 1048576 && bytes < 1073741824 )
+            else if (bytes >= 1024 && bytes < 1048576)
             {
-                return ((bytes / 1024f) / 1024f).ToString("0.00")+ " MB";
+                return (bytes / 1024f).ToString("0.00") + " KB";
             }
-            else if(bytes>= 1073741824)
+            else if (bytes >= 1048576 && bytes < 1073741824)
             {
-                return (((bytes / 1024f) / 1024f) /1024f).ToString("0.00") + " GB";
+                return ((bytes / 1024f) / 1024f).ToString("0.00") + " MB";
+            }
+            else if (bytes >= 1073741824)
+            {
+                return (((bytes / 1024f) / 1024f) / 1024f).ToString("0.00") + " GB";
             }
             return bytes.ToString("0.00") + "Bytes";
         }

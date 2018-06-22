@@ -1,9 +1,8 @@
 ﻿<!--******************************************************************************
- * VERITAS:    Copyright (c) 2017 Veritas Technologies LLC.
+ * VERITAS:    Copyright (c) 2018 Veritas Technologies LLC.
  * This software is licensed as described in the file LICENSE which is part of this repository
  *****************************************************************************/
 -->
-
 @model IEnumerable<BEArcus.WebApp.Models.MediaServer>
 @{
     Layout = "~/Views/Shared/_LayoutMonitor.cshtml";
@@ -38,11 +37,11 @@
             </div>
         </div>
         <br />
-        <div id="customerTable" class="row" style="width:1100px; padding-left: 20px;">
+        <div id="customerTable" class="row" style="width:1150px; padding-left: 20px;">
             @foreach (var customer in customers)
             {
                 <div style="background-color:white; padding-left:10px; padding-top:10px;" class="row">
-                    <div class="panel-group" style="float:left; display:inline; width:700px;">
+                    <div class="panel-group" style="float:left; display:inline; width:800px;">
                         <div class="panel panel-default">
                             <div class="panel-heading"><h3><span class="glyphicon glyphicon-user" style="margin-right:25px; margin-left: 25px;"></span>@customer</h3></div>
                             <div class="panel-body">
@@ -73,7 +72,9 @@
                                             <th>
                                                 @Html.DisplayName("Jobs Completed with Exceptions")
                                             </th>
-                                            <th></th>
+                                            <th>
+                                                <label data-toggle="tooltip" data-placement="top" title="Arcus is calculating approximate Estimated Capacity Usage and might not exactly match with BE.">Estimated Used Capacity* </label>
+                                            </th>
                                         </tr>
                                         @{var mediaServer = Model.Where(o => o.CustomerName.Equals(customer));}
                                         @foreach (var media in mediaServer)
@@ -84,7 +85,6 @@
                                                 </td>
                                                 <td>
                                                     <label>@media.Version.Substring(0, @media.Version.IndexOf(" "))</label>
-                                                    @*<label>@media.Version</label>*@
                                                 </td>
                                                 <td>
                                                     <label>@media.LastUpdate</label>
@@ -104,6 +104,23 @@
                                                 <td>
                                                     <a href='@Url.Action("FilterPanel", "MediaServer",new { id = customer, mediaServer=media.Name,befilter="CompletedWithExceptionJob" })'>@Html.Label(succeededWithExceptionsJobs.Where(o => o.MediaServerName.Equals(media.Name)).Count().ToString())</a>
                                                 </td>
+                                                <td>
+                                                    @try
+                                                    {
+                                                        if (media.EstimatedUsedCapacity.Equals(null))
+                                                        {
+                                                            <label>NA</label>
+                                                        }
+                                                        else
+                                                        {
+                                                            <label data-toggle="tooltip" data-placement="top" title="Arcus is calculating approximate Estimated Capacity Usage and might not exactly match with BE.">@media.EstimatedUsedCapacity Used</label>
+                                                        }
+                                                    }
+                                                    catch (Exception e)
+                                                    {
+                                                        <label>NA</label>
+                                                    }
+                                                </td>
                                             </tr>
                                         }
                                     </table>
@@ -111,11 +128,11 @@
                             </div>
                         </div>
                     </div>
-                    <div id=@i name="piechart" style="width: 400px; height: 300px; float:left; display:inline;"></div>
+                    <div id=@i name="piechart" style="width: 350px; height: 300px; float:left; display:inline;"></div>
                 </div>
 
-                                                i++;
-                                            }
+                i++;
+            }
         </div>
     </div>
     <script type="text/javascript">
@@ -164,5 +181,8 @@
             $("#customer").load("/MediaServer/FilteredImportantEvents", { mediaServer:"Media", alerts:@Html.Raw(Json.Encode(ViewBag.Alerts)),failedJobs:@Html.Raw(Json.Encode(ViewBag.FailedJobs)),missedJobs:@Html.Raw(Json.Encode(ViewBag.MissedJobs)),succeededJobs:@Html.Raw(Json.Encode(ViewBag.SucceededJobs)),succeededWithExceptionsJobs:@Html.Raw(Json.Encode(ViewBag.SucceededWithExceptions)),hrsSelected:$("#TimeFilter").val() });
         }
 
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
     </script>
-                                            }
+}

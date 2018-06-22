@@ -2,14 +2,14 @@
 <Configuration xmlns="http://schemas.arcus.com/configuration">
   <CommonSettings>
     <Setting Name="BemcliScripts" Value="BEMCLIScripts\Main.ps1" />
-    <Setting Name="CustomerName" Value="All BE Servers" />
+    <Setting Name="CustomerName" Value="Default Group" />
     <Setting Name="DatabaseName" Value="ArcusRegistry" />
     <Setting Name="AlertCollectionName" Value="AlertCollection" />
     <Setting Name="JobCollectionName" Value="JobCollection" />
     <Setting Name="JobHistoryCollectionName" Value="JobHistoryCollection" />
     <Setting Name="MediaServerCollectionName" Value="MediaServerCollection" />
     <Setting Name="TimeInterval" Value="6000000" />
-    <Setting Name="AgentVersion" Value="1.0"/>
+    <Setting Name="AgentVersion" Value="1.1"/>
     <Setting Name="LogFilePath" Value="C:\ArcusLogs"/>
     <Setting Name="PurgeDBInterval" Value="730"/>
   </CommonSettings>
